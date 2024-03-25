@@ -6,8 +6,8 @@ import { useAuthContext } from "@/contexts/AuthContext";
 import Chrome from "@/lib/chrome/chrome";
 
 export const HomePage = () => {
-  const authContext = useAuthContext();
   const [loading, setLoading] = useState(false);
+  const authContext = useAuthContext();
 
   const handleLogout = () => {
     authContext?.logout();
