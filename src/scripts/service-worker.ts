@@ -16,3 +16,11 @@ chrome.bookmarks.onRemoved.addListener((/* id, removeInfo */) => {
 
   Service.saveBookmarks(auth.currentUser);
 });
+
+chrome.bookmarks.onChanged.addListener((/* id, changeInfo */) => {
+  if (!auth.currentUser?.uid) {
+    return;
+  }
+
+  Service.saveBookmarks(auth.currentUser);
+});
