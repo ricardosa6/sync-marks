@@ -14,6 +14,7 @@ import { doc, setDoc } from "firebase/firestore";
 
 type AuthContextType = {
   currentUser?: User | null;
+  loading: boolean;
   login: (email: string, password: string) => Promise<UserCredential>;
   signup: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
@@ -78,8 +79,9 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     return unsubscribe;
   }, []);
 
-  const value = {
+  const value: AuthContextType = {
     currentUser,
+    loading,
     login,
     signup,
     logout,
@@ -88,9 +90,5 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     // updatePassword,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

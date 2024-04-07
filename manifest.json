@@ -2,9 +2,12 @@
   "name": "Sync bookmarks cross browsers",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": ["storage", "bookmarks"],
+  "permissions": ["storage", "bookmarks", "scripting", "identity"],
   "action": {
     "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/scripts/service-worker.ts"
   },
   "icons": {
     "16": "public/16.png",

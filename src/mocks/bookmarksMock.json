@@ -1,0 +1,2342 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "dateAdded": 1553515503000,
+                "dateLastUsed": 1710703954459,
+                "id": "9",
+                "index": 0,
+                "parentId": "21",
+                "title": "Gmail",
+                "url": "https://www.gmail.com/"
+              },
+              {
+                "dateAdded": 1553515418000,
+                "dateLastUsed": 1678474922623,
+                "id": "8",
+                "index": 1,
+                "parentId": "21",
+                "title": "Whatsapp Web",
+                "url": "https://web.whatsapp.com/"
+              },
+              {
+                "dateAdded": 1666282550812,
+                "id": "28",
+                "index": 2,
+                "parentId": "21",
+                "title": "Telegram Web",
+                "url": "https://web.telegram.org/"
+              },
+              {
+                "dateAdded": 1553515569000,
+                "dateLastUsed": 1685376509512,
+                "id": "25",
+                "index": 3,
+                "parentId": "21",
+                "title": "YouTube",
+                "url": "https://www.youtube.com/"
+              },
+              {
+                "dateAdded": 1553535057000,
+                "id": "22",
+                "index": 4,
+                "parentId": "21",
+                "title": "Twitter",
+                "url": "https://twitter.com/"
+              },
+              {
+                "dateAdded": 1581871509000,
+                "id": "23",
+                "index": 5,
+                "parentId": "21",
+                "title": "Twitch",
+                "url": "https://www.twitch.tv/"
+              },
+              {
+                "dateAdded": 1556177889000,
+                "id": "24",
+                "index": 6,
+                "parentId": "21",
+                "title": "Reddit",
+                "url": "https://www.reddit.com/"
+              },
+              {
+                "dateAdded": 1602330592000,
+                "id": "26",
+                "index": 7,
+                "parentId": "21",
+                "title": "Behance",
+                "url": "https://www.behance.net/"
+              },
+              {
+                "dateAdded": 1607641726000,
+                "id": "27",
+                "index": 8,
+                "parentId": "21",
+                "title": "Patreon",
+                "url": "https://www.patreon.com/"
+              }
+            ],
+            "dateAdded": 1655474740776,
+            "dateGroupModified": 1702123619089,
+            "id": "21",
+            "index": 0,
+            "parentId": "1",
+            "title": "Social"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1516374423000,
+                "id": "16",
+                "index": 0,
+                "parentId": "15",
+                "title": "SoundCloud",
+                "url": "https://soundcloud.com/stream"
+              },
+              {
+                "dateAdded": 1655473436076,
+                "id": "17",
+                "index": 1,
+                "parentId": "15",
+                "title": "Spotify | Web Player",
+                "url": "https://open.spotify.com/"
+              },
+              {
+                "dateAdded": 1567514890000,
+                "id": "18",
+                "index": 2,
+                "parentId": "15",
+                "title": "Genius",
+                "url": "https://genius.com/"
+              },
+              {
+                "dateAdded": 1636129289590,
+                "id": "19",
+                "index": 3,
+                "parentId": "15",
+                "title": "LiveMixtapes.com: Get It LIVE!",
+                "url": "https://www.livemixtapes.com/"
+              },
+              {
+                "dateAdded": 1636129300436,
+                "id": "20",
+                "index": 4,
+                "parentId": "15",
+                "title": "Spinrilla",
+                "url": "https://spinrilla.com/"
+              }
+            ],
+            "dateAdded": 1655473414927,
+            "dateGroupModified": 1655473436076,
+            "id": "15",
+            "index": 1,
+            "parentId": "1",
+            "title": "Music"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1619272505000,
+                "id": "13",
+                "index": 0,
+                "parentId": "247",
+                "title": "Notion",
+                "url": "https://notion.so/"
+              },
+              {
+                "dateAdded": 1615587887000,
+                "dateLastUsed": 1678392926525,
+                "id": "14",
+                "index": 1,
+                "parentId": "247",
+                "title": "Todoist",
+                "url": "https://todoist.com/app"
+              },
+              {
+                "dateAdded": 1677485046718,
+                "dateLastUsed": 1701257265106,
+                "id": "154",
+                "index": 2,
+                "parentId": "247",
+                "title": "Airtable",
+                "url": "https://airtable.com/"
+              },
+              {
+                "dateAdded": 1701257487179,
+                "id": "248",
+                "index": 3,
+                "parentId": "247",
+                "title": "Linear",
+                "url": "https://linear.app/"
+              },
+              {
+                "dateAdded": 1701258512650,
+                "id": "253",
+                "index": 4,
+                "parentId": "247",
+                "title": "Roam Research",
+                "url": "https://roamresearch.com/"
+              }
+            ],
+            "dateAdded": 1701257345125,
+            "dateGroupModified": 1701258512650,
+            "id": "247",
+            "index": 2,
+            "parentId": "1",
+            "title": "Productivity"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1605631663000,
+                "dateLastUsed": 1686328558977,
+                "id": "30",
+                "index": 0,
+                "parentId": "29",
+                "title": "MEGA",
+                "url": "https://mega.nz/"
+              },
+              {
+                "dateAdded": 1553617645000,
+                "dateLastUsed": 1685376800049,
+                "id": "31",
+                "index": 1,
+                "parentId": "29",
+                "title": "Google Drive",
+                "url": "https://drive.google.com/drive/my-drive"
+              },
+              {
+                "dateAdded": 1633588335071,
+                "id": "32",
+                "index": 2,
+                "parentId": "29",
+                "title": "MediaFire",
+                "url": "https://app.mediafire.com/myfiles"
+              },
+              {
+                "dateAdded": 1634029968843,
+                "id": "33",
+                "index": 3,
+                "parentId": "29",
+                "title": "Adobe Acrobat Documents",
+                "url": "https://documentcloud.adobe.com/"
+              },
+              {
+                "dateAdded": 1510854530000,
+                "id": "34",
+                "index": 4,
+                "parentId": "29",
+                "title": "Google Keep",
+                "url": "https://keep.google.com/"
+              },
+              {
+                "dateAdded": 1697273950895,
+                "id": "234",
+                "index": 5,
+                "parentId": "29",
+                "title": "Adobe Creative Cloud",
+                "url": "https://creativecloud.adobe.com/"
+              }
+            ],
+            "dateAdded": 1623847484998,
+            "dateGroupModified": 1697273950895,
+            "id": "29",
+            "index": 3,
+            "parentId": "1",
+            "title": "Cloud"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1674066358741,
+                        "id": "38",
+                        "index": 0,
+                        "parentId": "37",
+                        "title": "Meta for Developers",
+                        "url": "https://developers.facebook.com/"
+                      }
+                    ],
+                    "dateAdded": 1674066346419,
+                    "dateGroupModified": 1674066358741,
+                    "id": "37",
+                    "index": 0,
+                    "parentId": "36",
+                    "title": "Meta"
+                  }
+                ],
+                "dateAdded": 1674066306494,
+                "dateGroupModified": 1674066306494,
+                "id": "36",
+                "index": 0,
+                "parentId": "35",
+                "title": "TFM"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1630919596822,
+                    "id": "43",
+                    "index": 0,
+                    "parentId": "42",
+                    "title": "AWS Console",
+                    "url": "https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin&region=us-east-1"
+                  },
+                  {
+                    "dateAdded": 1632780528592,
+                    "id": "44",
+                    "index": 1,
+                    "parentId": "42",
+                    "title": "IGM-OpenGL | GitLab",
+                    "url": "https://gitlab.citic.udc.es/emilio.padron/igm-opengl"
+                  },
+                  {
+                    "dateAdded": 1635876618346,
+                    "id": "45",
+                    "index": 2,
+                    "parentId": "42",
+                    "title": "Docker Hub",
+                    "url": "https://hub.docker.com/"
+                  },
+                  {
+                    "dateAdded": 1636382846856,
+                    "id": "46",
+                    "index": 3,
+                    "parentId": "42",
+                    "title": "Docker + Azure",
+                    "url": "https://cafernandezlo.github.io/es_fic_muei_ics/"
+                  },
+                  {
+                    "dateAdded": 1638544754546,
+                    "id": "47",
+                    "index": 4,
+                    "parentId": "42",
+                    "title": "",
+                    "url": "https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github?rq=1"
+                  },
+                  {
+                    "dateAdded": 1644249938046,
+                    "id": "48",
+                    "index": 5,
+                    "parentId": "42",
+                    "title": "Laboratorio de Bases de Datos",
+                    "url": "https://lbd.udc.es/"
+                  },
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1652105383835,
+                        "id": "50",
+                        "index": 0,
+                        "parentId": "49",
+                        "title": "Design Sprint WTC (Equipo 3), Online Whiteboard for Visual Collaboration",
+                        "url": "https://miro.com/app/board/uXjVOHJ_ZHc=/"
+                      },
+                      {
+                        "dateAdded": 1652105392847,
+                        "id": "51",
+                        "index": 1,
+                        "parentId": "49",
+                        "title": "VANI siglas - Buscar con Google",
+                        "url": "https://www.google.com/search?q=VANI+siglas&rlz=1C1GCEU_esES957ES957&sxsrf=APq-WBtoUmJ9aU6R_sz5ygNPrkuxxr_NgQ%3A1646673683381&ei=Ez8mYuj0FoSdkgXwxb2wAw&ved=0ahUKEwioytW_wbT2AhWEjqQKHfBiDzYQ4dUDCA4&uact=5&oq=VANI+siglas&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABOgcIIxCwAxAnOgcIABBHELADOgcIABCwAxBDOg8ILhDUAhDIAxCwAxBDGAA6BAgAEEM6BQgAEIAEOgcILhAKEMsBOgUILhCABDoFCAAQywE6BggAEBYQHjoICAAQFhAKEB46BQguEMsBOggILhDUAhDLAToLCC4QxwEQrwEQywFKBAhBGABKBAhGGAFQ7gJYwiBgsCFoBXABeACAAc0CiAGxDZIBBzAuOC4xLjGYAQCgAQHIARPAAQHaAQYIABABGAg&sclient=gws-wiz"
+                      },
+                      {
+                        "dateAdded": 1652105399213,
+                        "id": "52",
+                        "index": 2,
+                        "parentId": "49",
+                        "title": "Untitled – Figma",
+                        "url": "https://www.figma.com/file/jkc4SVWinDQ8p44H4Vxxzw/Untitled?node-id=0%3A1"
+                      },
+                      {
+                        "dateAdded": 1652105408540,
+                        "id": "53",
+                        "index": 3,
+                        "parentId": "49",
+                        "title": "▶ Page 1 - Untitled",
+                        "url": "https://www.figma.com/proto/jkc4SVWinDQ8p44H4Vxxzw/Untitled?node-id=1%3A12&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A12"
+                      },
+                      {
+                        "dateAdded": 1652105416078,
+                        "id": "54",
+                        "index": 4,
+                        "parentId": "49",
+                        "title": "The Design Sprint — GV",
+                        "url": "https://www.gv.com/sprint/"
+                      },
+                      {
+                        "dateAdded": 1652105423941,
+                        "id": "55",
+                        "index": 5,
+                        "parentId": "49",
+                        "title": "Bird Android",
+                        "url": "https://mobbin.design/apps/bird-android-b65fb694-23a3-47db-8539-40925377a7b5"
+                      },
+                      {
+                        "dateAdded": 1652105434123,
+                        "id": "56",
+                        "index": 6,
+                        "parentId": "49",
+                        "title": "Adiós tiempo del VUCA, bienvenido BANI | Quint Group",
+                        "url": "https://www.quintgroup.com/es-es/insights/adios-vuca-bienvenido-bani/"
+                      }
+                    ],
+                    "dateAdded": 1652105360260,
+                    "dateGroupModified": 1652105434123,
+                    "id": "49",
+                    "index": 6,
+                    "parentId": "42",
+                    "title": "DESIGN SPRINT"
+                  }
+                ],
+                "dateAdded": 1630919607732,
+                "dateGroupModified": 1644249938046,
+                "id": "42",
+                "index": 1,
+                "parentId": "35",
+                "title": "MUEI"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1615587856000,
+                    "id": "58",
+                    "index": 0,
+                    "parentId": "57",
+                    "title": "blog Marcos Gestal",
+                    "url": "http://blog-trasnadas.blogspot.com/"
+                  },
+                  {
+                    "dateAdded": 1626208234703,
+                    "id": "59",
+                    "index": 1,
+                    "parentId": "57",
+                    "title": "Overleaf | LaTeX online",
+                    "url": "https://es.overleaf.com/project"
+                  }
+                ],
+                "dateAdded": 1623847485001,
+                "dateGroupModified": 1626208234703,
+                "id": "57",
+                "index": 2,
+                "parentId": "35",
+                "title": "TFG"
+              },
+              {
+                "dateAdded": 1600436168000,
+                "dateLastUsed": 1678824031810,
+                "id": "39",
+                "index": 3,
+                "parentId": "35",
+                "title": "Campus Virtual",
+                "url": "https://campusvirtual.udc.gal/my/"
+              },
+              {
+                "dateAdded": 1550846908000,
+                "dateLastUsed": 1706016313622,
+                "id": "40",
+                "index": 4,
+                "parentId": "35",
+                "title": "Outlook | UDC",
+                "url": "https://outlook.office.com/mail/inbox"
+              },
+              {
+                "dateAdded": 1631890049369,
+                "dateLastUsed": 1679941982733,
+                "id": "41",
+                "index": 5,
+                "parentId": "35",
+                "title": "OneDrive | UDC",
+                "url": "https://udcgal-my.sharepoint.com/personal/ricardo_sanchez1_udc_es/_layouts/15/onedrive.aspx"
+              }
+            ],
+            "dateAdded": 1623847485000,
+            "dateGroupModified": 1697273735965,
+            "id": "35",
+            "index": 4,
+            "parentId": "1",
+            "title": "Universidad"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "dateAdded": 1611525844000,
+                    "dateLastUsed": 1701257503472,
+                    "id": "134",
+                    "index": 0,
+                    "parentId": "249",
+                    "title": "CHAMPAN",
+                    "url": "https://champan.substack.com/"
+                  }
+                ],
+                "dateAdded": 1701257538794,
+                "dateGroupModified": 1701257546508,
+                "id": "249",
+                "index": 0,
+                "parentId": "60",
+                "title": "Newsletter"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1624210778142,
+                    "id": "63",
+                    "index": 0,
+                    "parentId": "261",
+                    "title": "Sisyphe",
+                    "url": "https://www.iamsisyphe.com/"
+                  },
+                  {
+                    "dateAdded": 1627742396368,
+                    "id": "64",
+                    "index": 1,
+                    "parentId": "261",
+                    "title": "4elementos",
+                    "url": "https://4elementos.es/"
+                  },
+                  {
+                    "dateAdded": 1630925604433,
+                    "id": "65",
+                    "index": 2,
+                    "parentId": "261",
+                    "title": "Kikillo®",
+                    "url": "https://kikillopieces.com/?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNPxNg_4dQGpepTpyLbMznXR6svRzG69ZO4uIaQyDHqi6zJUcPdW9IaAj7tEALw_wcB"
+                  },
+                  {
+                    "dateAdded": 1631092935221,
+                    "dateLastUsed": 1701257888597,
+                    "id": "66",
+                    "index": 3,
+                    "parentId": "261",
+                    "title": "Colorado Merch",
+                    "url": "https://www.coloradomerch.eu/"
+                  },
+                  {
+                    "dateAdded": 1700306219995,
+                    "id": "241",
+                    "index": 4,
+                    "parentId": "261",
+                    "title": "SSSTUFFF",
+                    "url": "https://ssstufff.com/"
+                  },
+                  {
+                    "dateAdded": 1634029276264,
+                    "id": "67",
+                    "index": 5,
+                    "parentId": "261",
+                    "title": "Inferno",
+                    "url": "https://www.infernostore.us/"
+                  },
+                  {
+                    "dateAdded": 1668689214290,
+                    "id": "71",
+                    "index": 6,
+                    "parentId": "261",
+                    "title": "FOOTDISTRICT",
+                    "url": "https://footdistrict.com/"
+                  },
+                  {
+                    "dateAdded": 1668689230517,
+                    "dateLastUsed": 1701946003801,
+                    "id": "72",
+                    "index": 7,
+                    "parentId": "261",
+                    "title": "La Tienda de las Gorras",
+                    "url": "https://latiendadelasgorras.com/"
+                  },
+                  {
+                    "dateAdded": 1614887630000,
+                    "id": "136",
+                    "index": 8,
+                    "parentId": "261",
+                    "title": "GothAngels",
+                    "url": "https://gothangelsww.es/"
+                  },
+                  {
+                    "dateAdded": 1701257619356,
+                    "id": "251",
+                    "index": 9,
+                    "parentId": "261",
+                    "title": "VICINITY",
+                    "url": "https://www.vicinityclo.de/"
+                  },
+                  {
+                    "dateAdded": 1701257776250,
+                    "id": "252",
+                    "index": 10,
+                    "parentId": "261",
+                    "title": "CRTZRTW",
+                    "url": "https://www.crtz.xyz/products/alcatraz-hoodie-triple-black?variant=43180483608706"
+                  },
+                  {
+                    "dateAdded": 1701541037487,
+                    "id": "255",
+                    "index": 11,
+                    "parentId": "261",
+                    "title": "COLD CULTURE",
+                    "url": "https://coldcultureworldwide.com/"
+                  },
+                  {
+                    "dateAdded": 1683445183696,
+                    "id": "208",
+                    "index": 12,
+                    "parentId": "261",
+                    "title": "Peregrinoteca",
+                    "url": "https://www.peregrinoteca.com/"
+                  }
+                ],
+                "dateAdded": 1702123655499,
+                "dateGroupModified": 1702123773674,
+                "id": "261",
+                "index": 1,
+                "parentId": "60",
+                "title": "Fashion"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1616511399000,
+                    "dateLastUsed": 1702123659119,
+                    "id": "62",
+                    "index": 0,
+                    "parentId": "262",
+                    "title": "PCComponentes",
+                    "url": "https://www.pccomponentes.com/"
+                  },
+                  {
+                    "dateAdded": 1635670318089,
+                    "id": "68",
+                    "index": 1,
+                    "parentId": "262",
+                    "title": "DEV Shop",
+                    "url": "https://shop.dev.to/"
+                  },
+                  {
+                    "dateAdded": 1675541635070,
+                    "id": "73",
+                    "index": 2,
+                    "parentId": "262",
+                    "title": "Grover",
+                    "url": "https://www.grover.com/"
+                  },
+                  {
+                    "dateAdded": 1511864576000,
+                    "dateLastUsed": 1701257569112,
+                    "id": "12",
+                    "index": 3,
+                    "parentId": "262",
+                    "title": "Camera Decision",
+                    "url": "http://cameradecision.com/find"
+                  },
+                  {
+                    "dateAdded": 1682445076656,
+                    "dateLastUsed": 1702123745541,
+                    "id": "199",
+                    "index": 4,
+                    "parentId": "262",
+                    "title": "reMarkable",
+                    "url": "https://remarkable.com/"
+                  }
+                ],
+                "dateAdded": 1702123724446,
+                "dateGroupModified": 1702123769209,
+                "id": "262",
+                "index": 2,
+                "parentId": "60",
+                "title": "Tech"
+              },
+              {
+                "dateAdded": 1605626472000,
+                "id": "61",
+                "index": 3,
+                "parentId": "60",
+                "title": "Amazon",
+                "url": "https://www.amazon.es/"
+              },
+              {
+                "dateAdded": 1649254813160,
+                "id": "69",
+                "index": 4,
+                "parentId": "60",
+                "title": "Unilae.com | Tu tienda online: salud, deportes, decoración y más",
+                "url": "https://www.unilae.com/"
+              },
+              {
+                "dateAdded": 1651948363097,
+                "id": "70",
+                "index": 5,
+                "parentId": "60",
+                "title": "Camel Camel Came | Amazon price tracker, Amazon price history charts, price watches, and price drop alerts. | camelcamelcamel.com",
+                "url": "https://es.camelcamelcamel.com/"
+              }
+            ],
+            "dateAdded": 1623847484998,
+            "dateGroupModified": 1702123728007,
+            "id": "60",
+            "index": 5,
+            "parentId": "1",
+            "title": "Shop"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "dateAdded": 1677341848259,
+                    "id": "149",
+                    "index": 0,
+                    "parentId": "148",
+                    "title": "Swagger Editor",
+                    "url": "https://editor.swagger.io/"
+                  },
+                  {
+                    "dateAdded": 1680540969834,
+                    "id": "179",
+                    "index": 1,
+                    "parentId": "148",
+                    "title": "Node.js support",
+                    "url": "https://node.green/"
+                  }
+                ],
+                "dateAdded": 1677341778284,
+                "dateGroupModified": 1680540969834,
+                "id": "148",
+                "index": 0,
+                "parentId": "74",
+                "title": "Utils"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1677271196954,
+                    "id": "142",
+                    "index": 0,
+                    "parentId": "141",
+                    "title": "Proto.io",
+                    "url": "https://proto.io/"
+                  },
+                  {
+                    "dateAdded": 1677325366090,
+                    "id": "143",
+                    "index": 1,
+                    "parentId": "141",
+                    "title": "Sketch",
+                    "url": "https://www.sketch.com/"
+                  },
+                  {
+                    "dateAdded": 1677325417152,
+                    "dateLastUsed": 1677325570327,
+                    "id": "144",
+                    "index": 2,
+                    "parentId": "141",
+                    "title": "Figma",
+                    "url": "https://www.figma.com/"
+                  },
+                  {
+                    "dateAdded": 1677325488741,
+                    "id": "145",
+                    "index": 3,
+                    "parentId": "141",
+                    "title": "Penpot",
+                    "url": "https://design.penpot.app/#/dashbo%C2%BAard/team/dda74761-2507-8023-8001-85ec929ed931/projects"
+                  },
+                  {
+                    "dateAdded": 1677484835212,
+                    "dateLastUsed": 1679599374892,
+                    "id": "152",
+                    "index": 4,
+                    "parentId": "141",
+                    "title": "Galileo AI",
+                    "url": "https://www.usegalileo.ai/"
+                  }
+                ],
+                "dateAdded": 1677271160830,
+                "dateGroupModified": 1677484835212,
+                "id": "141",
+                "index": 1,
+                "parentId": "74",
+                "title": "Mock/Prototype"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1610625744000,
+                    "id": "79",
+                    "index": 0,
+                    "parentId": "78",
+                    "title": "Codewars",
+                    "url": "https://www.codewars.com/"
+                  },
+                  {
+                    "dateAdded": 1604569889000,
+                    "id": "80",
+                    "index": 1,
+                    "parentId": "78",
+                    "title": "LeetCode",
+                    "url": "https://leetcode.com/"
+                  },
+                  {
+                    "dateAdded": 1618502896000,
+                    "id": "81",
+                    "index": 2,
+                    "parentId": "78",
+                    "title": "Advent of Code",
+                    "url": "https://adventofcode.com/"
+                  },
+                  {
+                    "dateAdded": 1604569779000,
+                    "id": "82",
+                    "index": 3,
+                    "parentId": "78",
+                    "title": "TypingClub",
+                    "url": "https://www.typingclub.com/sportal/"
+                  },
+                  {
+                    "dateAdded": 1609849564000,
+                    "id": "83",
+                    "index": 4,
+                    "parentId": "78",
+                    "title": "Crypt4you",
+                    "url": "http://www.criptored.upm.es/crypt4you/portada.html"
+                  },
+                  {
+                    "dateAdded": 1609849667000,
+                    "id": "84",
+                    "index": 5,
+                    "parentId": "78",
+                    "title": "MOOC Crypt4you UPM",
+                    "url": "http://www.criptored.upm.es/crypt4you/temas/RSA/leccion0/leccion00.html"
+                  },
+                  {
+                    "dateAdded": 1639420641697,
+                    "id": "85",
+                    "index": 6,
+                    "parentId": "78",
+                    "title": "Learn to Code | FreeCodeCampo",
+                    "url": "https://www.freecodecamp.org/"
+                  },
+                  {
+                    "dateAdded": 1639420655451,
+                    "id": "86",
+                    "index": 7,
+                    "parentId": "78",
+                    "title": "CSSBattle - the CSS code-golfing game!",
+                    "url": "https://cssbattle.dev/"
+                  },
+                  {
+                    "dateAdded": 1677153363806,
+                    "id": "140",
+                    "index": 8,
+                    "parentId": "78",
+                    "title": "Algorithm Visualizer",
+                    "url": "https://algorithm-visualizer.org/"
+                  },
+                  {
+                    "dateAdded": 1680540945685,
+                    "id": "178",
+                    "index": 9,
+                    "parentId": "78",
+                    "title": "Code cheatsheets | shortcode.dev",
+                    "url": "https://shortcode.dev/"
+                  },
+                  {
+                    "dateAdded": 1674912785534,
+                    "id": "107",
+                    "index": 10,
+                    "parentId": "78",
+                    "title": "Hack The Box",
+                    "url": "https://www.hackthebox.com/"
+                  },
+                  {
+                    "dateAdded": 1696435876062,
+                    "dateLastUsed": 1696435881218,
+                    "id": "232",
+                    "index": 11,
+                    "parentId": "78",
+                    "title": "Refactoring Guru",
+                    "url": "https://refactoring.guru/es/"
+                  },
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1707502221085,
+                        "id": "294",
+                        "index": 0,
+                        "parentId": "293",
+                        "title": "Hexagonal Architecture",
+                        "url": "https://fideloper.com/hexagonal-architecture"
+                      },
+                      {
+                        "dateAdded": 1707502401331,
+                        "id": "295",
+                        "index": 1,
+                        "parentId": "293",
+                        "title": "Introducción a DDD y arquitectura hexagonal con un ejemplo de aplicación en Java",
+                        "url": "https://picodotdev.github.io/blog-bitix/2021/02/introduccion-a-ddd-y-arquitectura-hexagonal-con-un-ejemplo-de-aplicacion-en-java/#_domain-driven-design_"
+                      }
+                    ],
+                    "dateAdded": 1707502214022,
+                    "dateGroupModified": 1707502401331,
+                    "id": "293",
+                    "index": 12,
+                    "parentId": "78",
+                    "title": "Articles"
+                  },
+                  {
+                    "dateAdded": 1709913036795,
+                    "id": "313",
+                    "index": 13,
+                    "parentId": "78",
+                    "title": "Patterns.dev",
+                    "url": "https://www.patterns.dev/"
+                  }
+                ],
+                "dateAdded": 1623847484999,
+                "dateGroupModified": 1709913036795,
+                "id": "78",
+                "index": 2,
+                "parentId": "74",
+                "title": "Learn"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1675541303914,
+                    "dateLastUsed": 1705342311793,
+                    "id": "88",
+                    "index": 0,
+                    "parentId": "87",
+                    "title": "Vercel",
+                    "url": "https://vercel.com/"
+                  },
+                  {
+                    "dateAdded": 1675541480951,
+                    "dateLastUsed": 1676823891532,
+                    "id": "91",
+                    "index": 1,
+                    "parentId": "87",
+                    "title": "Render",
+                    "url": "https://render.com/"
+                  },
+                  {
+                    "dateAdded": 1675541489167,
+                    "dateLastUsed": 1705342313119,
+                    "id": "92",
+                    "index": 2,
+                    "parentId": "87",
+                    "title": "Railway",
+                    "url": "https://railway.app/"
+                  },
+                  {
+                    "dateAdded": 1680540844875,
+                    "dateLastUsed": 1705342312374,
+                    "id": "177",
+                    "index": 3,
+                    "parentId": "87",
+                    "title": "Netlify",
+                    "url": "https://www.netlify.com/"
+                  }
+                ],
+                "dateAdded": 1675541268330,
+                "dateGroupModified": 1693584853067,
+                "id": "87",
+                "index": 3,
+                "parentId": "74",
+                "title": "Hostings"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1673094017661,
+                    "id": "105",
+                    "index": 0,
+                    "parentId": "160",
+                    "title": "Firebase",
+                    "url": "https://firebase.google.com/?hl=es"
+                  },
+                  {
+                    "dateAdded": 1673107019259,
+                    "dateLastUsed": 1675541359883,
+                    "id": "89",
+                    "index": 1,
+                    "parentId": "160",
+                    "title": "Cloudflare Workers®",
+                    "url": "https://workers.cloudflare.com/"
+                  },
+                  {
+                    "dateAdded": 1675541380145,
+                    "id": "90",
+                    "index": 2,
+                    "parentId": "160",
+                    "title": "Cloudflare Dashboard",
+                    "url": "https://dash.cloudflare.com/"
+                  },
+                  {
+                    "dateAdded": 1682084442732,
+                    "id": "194",
+                    "index": 3,
+                    "parentId": "160",
+                    "title": "Supabase",
+                    "url": "https://supabase.com/"
+                  },
+                  {
+                    "dateAdded": 1707063136607,
+                    "id": "282",
+                    "index": 4,
+                    "parentId": "160",
+                    "title": "Neon — Serverless, Fault-Tolerant, Branchable Postgres",
+                    "url": "https://neon.tech/"
+                  },
+                  {
+                    "dateAdded": 1707063181507,
+                    "id": "283",
+                    "index": 5,
+                    "parentId": "160",
+                    "title": "Turso | Create countless databases & embed them anywhere. Simple.",
+                    "url": "https://turso.tech/"
+                  },
+                  {
+                    "dateAdded": 1682020148065,
+                    "id": "186",
+                    "index": 6,
+                    "parentId": "160",
+                    "title": "Tigris Data - Serverless NoSQL + Search Platform",
+                    "url": "https://www.tigrisdata.com/"
+                  }
+                ],
+                "dateAdded": 1678214751920,
+                "dateGroupModified": 1707063412733,
+                "id": "160",
+                "index": 4,
+                "parentId": "74",
+                "title": "PaaS"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1583772322000,
+                    "id": "93",
+                    "index": 0,
+                    "parentId": "153",
+                    "title": "Trello",
+                    "url": "https://trello.com/"
+                  }
+                ],
+                "dateAdded": 1677485021075,
+                "dateGroupModified": 1678217571986,
+                "id": "153",
+                "index": 5,
+                "parentId": "74",
+                "title": "Planning"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1678214956494,
+                    "id": "159",
+                    "index": 0,
+                    "parentId": "158",
+                    "title": "Let's Encrypt",
+                    "url": "https://letsencrypt.org/es/"
+                  }
+                ],
+                "dateAdded": 1678214946787,
+                "dateGroupModified": 1678214956494,
+                "id": "158",
+                "index": 6,
+                "parentId": "74",
+                "title": "Certificados"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1678819882172,
+                    "id": "163",
+                    "index": 0,
+                    "parentId": "162",
+                    "title": "Web Application Exploits and Defenses",
+                    "url": "http://google-gruyere.appspot.com/part1#1__using_gruyere"
+                  }
+                ],
+                "dateAdded": 1678819874669,
+                "dateGroupModified": 1678819882172,
+                "id": "162",
+                "index": 7,
+                "parentId": "74",
+                "title": "Hacking"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1680189234087,
+                    "id": "166",
+                    "index": 0,
+                    "parentId": "165",
+                    "title": "Astro",
+                    "url": "https://astro.build/"
+                  },
+                  {
+                    "dateAdded": 1680189256063,
+                    "id": "167",
+                    "index": 1,
+                    "parentId": "165",
+                    "title": "SolidJS",
+                    "url": "https://www.solidjs.com/"
+                  },
+                  {
+                    "dateAdded": 1680189276959,
+                    "dateLastUsed": 1680189424422,
+                    "id": "168",
+                    "index": 2,
+                    "parentId": "165",
+                    "title": "Svelte",
+                    "url": "https://svelte.dev/"
+                  },
+                  {
+                    "dateAdded": 1680189510225,
+                    "id": "173",
+                    "index": 3,
+                    "parentId": "165",
+                    "title": "SvelteKit",
+                    "url": "https://kit.svelte.dev/"
+                  },
+                  {
+                    "dateAdded": 1680189301018,
+                    "id": "169",
+                    "index": 4,
+                    "parentId": "165",
+                    "title": "Qwik",
+                    "url": "https://qwik.builder.io/"
+                  },
+                  {
+                    "dateAdded": 1680189326774,
+                    "id": "170",
+                    "index": 5,
+                    "parentId": "165",
+                    "title": "deno fresh",
+                    "url": "https://fresh.deno.dev/"
+                  },
+                  {
+                    "dateAdded": 1680189362723,
+                    "id": "171",
+                    "index": 6,
+                    "parentId": "165",
+                    "title": "Preact",
+                    "url": "https://preactjs.com/"
+                  },
+                  {
+                    "dateAdded": 1680189389933,
+                    "id": "172",
+                    "index": 7,
+                    "parentId": "165",
+                    "title": "tRPC",
+                    "url": "https://trpc.io/"
+                  },
+                  {
+                    "dateAdded": 1682021059189,
+                    "id": "190",
+                    "index": 8,
+                    "parentId": "165",
+                    "title": "Next.js",
+                    "url": "https://nextjs.org/"
+                  },
+                  {
+                    "dateAdded": 1682444034580,
+                    "id": "198",
+                    "index": 9,
+                    "parentId": "165",
+                    "title": "Tailwind CSS",
+                    "url": "https://tailwindcss.com/"
+                  },
+                  {
+                    "dateAdded": 1689157431159,
+                    "id": "210",
+                    "index": 10,
+                    "parentId": "165",
+                    "title": "Lit",
+                    "url": "https://lit.dev/"
+                  },
+                  {
+                    "dateAdded": 1682021328986,
+                    "id": "191",
+                    "index": 11,
+                    "parentId": "165",
+                    "title": "Gatsby",
+                    "url": "https://www.gatsbyjs.com/"
+                  },
+                  {
+                    "dateAdded": 1701852984682,
+                    "id": "257",
+                    "index": 12,
+                    "parentId": "165",
+                    "title": "Reflex: Web apps in Pure Python",
+                    "url": "https://reflex.dev/"
+                  },
+                  {
+                    "dateAdded": 1702807913733,
+                    "id": "269",
+                    "index": 13,
+                    "parentId": "165",
+                    "title": "Hono - Ultrafast web framework for the Edges",
+                    "url": "https://hono.dev/"
+                  }
+                ],
+                "dateAdded": 1680189192394,
+                "dateGroupModified": 1702807913733,
+                "id": "165",
+                "index": 8,
+                "parentId": "74",
+                "title": "Web Frameworks"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1680192672768,
+                    "id": "175",
+                    "index": 0,
+                    "parentId": "174",
+                    "title": "Chakra UI",
+                    "url": "https://chakra-ui.com/"
+                  },
+                  {
+                    "dateAdded": 1680806539239,
+                    "id": "184",
+                    "index": 1,
+                    "parentId": "174",
+                    "title": "Tremor",
+                    "url": "https://www.tremor.so/"
+                  },
+                  {
+                    "dateAdded": 1695238174072,
+                    "dateLastUsed": 1709381845528,
+                    "id": "220",
+                    "index": 2,
+                    "parentId": "174",
+                    "title": "Tabler",
+                    "url": "https://tabler.io/icons"
+                  }
+                ],
+                "dateAdded": 1680192655387,
+                "dateGroupModified": 1695238174072,
+                "id": "174",
+                "index": 9,
+                "parentId": "74",
+                "title": "Components Libraries"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1680542608208,
+                    "id": "182",
+                    "index": 0,
+                    "parentId": "181",
+                    "title": "Hacker News",
+                    "url": "https://news.ycombinator.com/"
+                  },
+                  {
+                    "dateAdded": 1621974658000,
+                    "dateLastUsed": 1695238456961,
+                    "id": "77",
+                    "index": 1,
+                    "parentId": "181",
+                    "title": "DEV",
+                    "url": "https://dev.to/connect"
+                  },
+                  {
+                    "dateAdded": 1621975216000,
+                    "dateLastUsed": 1680802198723,
+                    "id": "76",
+                    "index": 2,
+                    "parentId": "181",
+                    "title": "daily.dev",
+                    "url": "https://app.daily.dev/"
+                  }
+                ],
+                "dateAdded": 1680542595567,
+                "dateGroupModified": 1702123567527,
+                "id": "181",
+                "index": 10,
+                "parentId": "74",
+                "title": "News"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1682020412756,
+                    "id": "188",
+                    "index": 0,
+                    "parentId": "187",
+                    "title": "Vite",
+                    "url": "https://vitejs.dev/"
+                  },
+                  {
+                    "dateAdded": 1682020525122,
+                    "id": "189",
+                    "index": 1,
+                    "parentId": "187",
+                    "title": "webpack",
+                    "url": "https://webpack.js.org/"
+                  }
+                ],
+                "dateAdded": 1682020367458,
+                "dateGroupModified": 1682020525122,
+                "id": "187",
+                "index": 11,
+                "parentId": "74",
+                "title": "Build tools"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1682021385628,
+                    "id": "193",
+                    "index": 0,
+                    "parentId": "192",
+                    "title": "Playwright",
+                    "url": "https://playwright.dev/"
+                  }
+                ],
+                "dateAdded": 1682021371167,
+                "dateGroupModified": 1682021385628,
+                "id": "192",
+                "index": 12,
+                "parentId": "74",
+                "title": "Testing"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1689157481657,
+                    "id": "212",
+                    "index": 0,
+                    "parentId": "211",
+                    "title": "Arc from The Browser Company",
+                    "url": "https://arc.net/"
+                  }
+                ],
+                "dateAdded": 1689157457453,
+                "dateGroupModified": 1689157481657,
+                "id": "211",
+                "index": 13,
+                "parentId": "74",
+                "title": "Browsers"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1689158217834,
+                    "id": "214",
+                    "index": 0,
+                    "parentId": "213",
+                    "title": "Bun — A fast all-in-one JavaScript runtime",
+                    "url": "https://bun.sh/"
+                  },
+                  {
+                    "dateAdded": 1689158229434,
+                    "id": "215",
+                    "index": 1,
+                    "parentId": "213",
+                    "title": "Deno — A modern runtime for JavaScript and TypeScript",
+                    "url": "https://deno.land/"
+                  }
+                ],
+                "dateAdded": 1689158201322,
+                "dateGroupModified": 1689158229434,
+                "id": "213",
+                "index": 14,
+                "parentId": "74",
+                "title": "Runtime"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1695238145071,
+                    "id": "219",
+                    "index": 0,
+                    "parentId": "218",
+                    "title": "Tabler Icons",
+                    "url": "https://tabler-icons.io/"
+                  }
+                ],
+                "dateAdded": 1695238128161,
+                "dateGroupModified": 1695238145071,
+                "id": "218",
+                "index": 15,
+                "parentId": "74",
+                "title": "Icons"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1670441707713,
+                    "id": "100",
+                    "index": 0,
+                    "parentId": "221",
+                    "title": "OpenAI",
+                    "url": "https://openai.com/"
+                  },
+                  {
+                    "dateAdded": 1671570175813,
+                    "dateLastUsed": 1689506010507,
+                    "id": "103",
+                    "index": 1,
+                    "parentId": "221",
+                    "title": "ChatGPT",
+                    "url": "https://chat.openai.com/auth/login"
+                  },
+                  {
+                    "dateAdded": 1696268542095,
+                    "id": "227",
+                    "index": 2,
+                    "parentId": "221",
+                    "title": "v0.dev",
+                    "url": "https://v0.dev/"
+                  },
+                  {
+                    "dateAdded": 1707589656311,
+                    "id": "296",
+                    "index": 3,
+                    "parentId": "221",
+                    "title": "Gemini",
+                    "url": "https://deepmind.google/technologies/gemini/#introduction"
+                  },
+                  {
+                    "dateAdded": 1707668684609,
+                    "id": "297",
+                    "index": 4,
+                    "parentId": "221",
+                    "title": "tfm.drawio - draw.io",
+                    "url": "https://app.diagrams.net/#G1aVSeHompnnSGoW1iiRGW3iEBJdL5Mda_#%7B%22pageId%22%3A%22GrVdlHqg3BihtKF9hMy4%22%7D"
+                  },
+                  {
+                    "dateAdded": 1709208132839,
+                    "id": "307",
+                    "index": 5,
+                    "parentId": "221",
+                    "title": "llama-node",
+                    "url": "https://llama-node.vercel.app/docs"
+                  },
+                  {
+                    "dateAdded": 1709208283818,
+                    "id": "308",
+                    "index": 6,
+                    "parentId": "221",
+                    "title": "Llama",
+                    "url": "https://llama.meta.com/"
+                  }
+                ],
+                "dateAdded": 1695238408622,
+                "dateGroupModified": 1709208283818,
+                "id": "221",
+                "index": 16,
+                "parentId": "74",
+                "title": "IA"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1696435691316,
+                    "id": "229",
+                    "index": 0,
+                    "parentId": "228",
+                    "title": "Framer",
+                    "url": "https://www.framer.com/"
+                  },
+                  {
+                    "dateAdded": 1696435714048,
+                    "id": "230",
+                    "index": 1,
+                    "parentId": "228",
+                    "title": "FlutterFlow",
+                    "url": "https://flutterflow.io/"
+                  },
+                  {
+                    "dateAdded": 1696435733768,
+                    "id": "231",
+                    "index": 2,
+                    "parentId": "228",
+                    "title": "Webflow",
+                    "url": "https://webflow.com/"
+                  }
+                ],
+                "dateAdded": 1696435677976,
+                "dateGroupModified": 1696435733768,
+                "id": "228",
+                "index": 17,
+                "parentId": "74",
+                "title": "No code"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1554798117000,
+                    "id": "10",
+                    "index": 0,
+                    "parentId": "244",
+                    "title": "GitLab",
+                    "url": "https://gitlab.com/"
+                  },
+                  {
+                    "dateAdded": 1600813774000,
+                    "dateLastUsed": 1676321855449,
+                    "id": "11",
+                    "index": 1,
+                    "parentId": "244",
+                    "title": "GitHub",
+                    "url": "https://github.com/"
+                  }
+                ],
+                "dateAdded": 1701193255204,
+                "dateGroupModified": 1701193270200,
+                "id": "244",
+                "index": 18,
+                "parentId": "74",
+                "title": "Repository web"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1701193413082,
+                    "id": "246",
+                    "index": 0,
+                    "parentId": "245",
+                    "title": "Project IDX",
+                    "url": "https://idx.dev/"
+                  },
+                  {
+                    "dateAdded": 1701192042270,
+                    "id": "243",
+                    "index": 1,
+                    "parentId": "245",
+                    "title": "Pulsar IDE",
+                    "url": "https://pulsar-edit.dev/"
+                  },
+                  {
+                    "dateAdded": 1706282016151,
+                    "id": "279",
+                    "index": 2,
+                    "parentId": "245",
+                    "title": "Zed - Code at the speed of thought",
+                    "url": "https://zed.dev/"
+                  }
+                ],
+                "dateAdded": 1701193281439,
+                "dateGroupModified": 1707063394998,
+                "id": "245",
+                "index": 19,
+                "parentId": "74",
+                "title": "IDEs"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1677325515883,
+                    "dateLastUsed": 1702123790786,
+                    "id": "146",
+                    "index": 0,
+                    "parentId": "263",
+                    "title": "Penpot",
+                    "url": "https://penpot.app/"
+                  },
+                  {
+                    "dateAdded": 1702123909082,
+                    "id": "264",
+                    "index": 1,
+                    "parentId": "263",
+                    "title": "Figma",
+                    "url": "https://www.figma.com/"
+                  }
+                ],
+                "dateAdded": 1702123812258,
+                "dateGroupModified": 1702123909082,
+                "id": "263",
+                "index": 20,
+                "parentId": "74",
+                "title": "Design"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1615728233000,
+                    "id": "129",
+                    "index": 0,
+                    "parentId": "128",
+                    "title": "IFTTT | Helps every thing work better together",
+                    "url": "https://ifttt.com/"
+                  },
+                  {
+                    "dateAdded": 1615728481000,
+                    "id": "130",
+                    "index": 1,
+                    "parentId": "128",
+                    "title": "Evernote | Para tomar notas",
+                    "url": "https://www.evernote.com/client/web?login=true#?hm=true&"
+                  },
+                  {
+                    "dateAdded": 1615728488000,
+                    "id": "131",
+                    "index": 2,
+                    "parentId": "128",
+                    "title": "Pocket",
+                    "url": "https://getpocket.com/my-list?src=signup"
+                  },
+                  {
+                    "dateAdded": 1615728509000,
+                    "id": "132",
+                    "index": 3,
+                    "parentId": "128",
+                    "title": "Qsync | Sincronización de archivos",
+                    "url": "https://www.qnap.com/es-es/software/qsync"
+                  },
+                  {
+                    "dateAdded": 1619013913000,
+                    "id": "133",
+                    "index": 4,
+                    "parentId": "128",
+                    "title": "IPFS Powers the Distributed Web",
+                    "url": "https://ipfs.io/"
+                  }
+                ],
+                "dateAdded": 1623847485003,
+                "dateGroupModified": 1623847485003,
+                "id": "128",
+                "index": 21,
+                "parentId": "74",
+                "title": "Varios"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1707063381187,
+                    "id": "285",
+                    "index": 0,
+                    "parentId": "284",
+                    "title": "Cassidy's blog",
+                    "url": "https://blog.cassidoo.co/"
+                  },
+                  {
+                    "dateAdded": 1707063532412,
+                    "id": "286",
+                    "index": 1,
+                    "parentId": "284",
+                    "title": "overreacted — A blog by Dan Abramov",
+                    "url": "https://overreacted.io/"
+                  },
+                  {
+                    "dateAdded": 1710923261739,
+                    "id": "316",
+                    "index": 2,
+                    "parentId": "284",
+                    "title": "DEFSEC – En defensa de los secretos",
+                    "url": "https://defsec.noblogs.org/"
+                  }
+                ],
+                "dateAdded": 1707063365960,
+                "dateGroupModified": 1710923261739,
+                "id": "284",
+                "index": 22,
+                "parentId": "74",
+                "title": "Blogs"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1707130698974,
+                    "id": "291",
+                    "index": 0,
+                    "parentId": "290",
+                    "title": "Raycast",
+                    "url": "https://www.raycast.com/"
+                  }
+                ],
+                "dateAdded": 1707130679568,
+                "dateGroupModified": 1707130698974,
+                "id": "290",
+                "index": 23,
+                "parentId": "74",
+                "title": "Mac Utils"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1707936265659,
+                    "id": "301",
+                    "index": 0,
+                    "parentId": "300",
+                    "title": "Codecov",
+                    "url": "https://docs.codecov.com/docs/quick-start"
+                  },
+                  {
+                    "dateAdded": 1707936334283,
+                    "id": "302",
+                    "index": 1,
+                    "parentId": "300",
+                    "title": "Sonar",
+                    "url": "https://www.sonarsource.com/"
+                  }
+                ],
+                "dateAdded": 1707936232892,
+                "dateGroupModified": 1707936334283,
+                "id": "300",
+                "index": 24,
+                "parentId": "74",
+                "title": "Code Quality"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1708076451978,
+                    "id": "304",
+                    "index": 0,
+                    "parentId": "303",
+                    "title": "ConfigCat - Feature Flag Service for Teams",
+                    "url": "https://configcat.com/"
+                  },
+                  {
+                    "dateAdded": 1708105470803,
+                    "id": "305",
+                    "index": 1,
+                    "parentId": "303",
+                    "title": "fix · ricardosa6/hairly-bot-service@e62c24a",
+                    "url": "https://github.com/ricardosa6/hairly-bot-service/actions/runs/7932791825/job/21660055206"
+                  }
+                ],
+                "dateAdded": 1708076439142,
+                "dateGroupModified": 1708454130012,
+                "id": "303",
+                "index": 25,
+                "parentId": "74",
+                "title": "Feature flags"
+              },
+              {
+                "dateAdded": 1630080872700,
+                "id": "75",
+                "index": 26,
+                "parentId": "74",
+                "title": "PEUM | Blog",
+                "url": "https://www.programaresunamierda.com/"
+              },
+              {
+                "dateAdded": 1682091576785,
+                "id": "195",
+                "index": 27,
+                "parentId": "74",
+                "title": "Expo Documentation",
+                "url": "https://docs.expo.dev/"
+              },
+              {
+                "dateAdded": 1634575456695,
+                "id": "94",
+                "index": 28,
+                "parentId": "74",
+                "title": "W3Schools Templates",
+                "url": "https://www.w3schools.com/w3css/default.asp"
+              },
+              {
+                "dateAdded": 1695491766181,
+                "id": "222",
+                "index": 29,
+                "parentId": "74",
+                "title": "OrbStack",
+                "url": "https://orbstack.dev/"
+              },
+              {
+                "dateAdded": 1635941744708,
+                "id": "95",
+                "index": 30,
+                "parentId": "74",
+                "title": "Components | CodyHouse",
+                "url": "https://codyhouse.co/ds/components"
+              },
+              {
+                "dateAdded": 1647969041969,
+                "id": "96",
+                "index": 31,
+                "parentId": "74",
+                "title": "Data Virtualization Blog",
+                "url": "https://www.datavirtualizationblog.com/"
+              },
+              {
+                "dateAdded": 1652606281258,
+                "id": "97",
+                "index": 32,
+                "parentId": "74",
+                "title": "codi.link | HTML, CSS, JavaScript Live Editor Playground",
+                "url": "https://codi.link/"
+              },
+              {
+                "dateAdded": 1666720614923,
+                "id": "98",
+                "index": 33,
+                "parentId": "74",
+                "title": "GitGuardian",
+                "url": "https://dashboard.gitguardian.com/"
+              },
+              {
+                "dateAdded": 1670609622694,
+                "id": "101",
+                "index": 34,
+                "parentId": "74",
+                "title": "Apache Jena - ARQ - Command Line Applications",
+                "url": "https://jena.apache.org/documentation/query/cmds.html"
+              },
+              {
+                "dateAdded": 1707935689769,
+                "id": "299",
+                "index": 35,
+                "parentId": "74",
+                "title": "TypeORM",
+                "url": "https://typeorm.io/"
+              },
+              {
+                "dateAdded": 1673030480853,
+                "id": "104",
+                "index": 36,
+                "parentId": "74",
+                "title": "Scoop",
+                "url": "https://scoop.sh/"
+              },
+              {
+                "dateAdded": 1673122238649,
+                "id": "106",
+                "index": 37,
+                "parentId": "74",
+                "title": "Crontab.guru - The cron schedule expression editor",
+                "url": "https://crontab.guru/"
+              },
+              {
+                "dateAdded": 1675279735077,
+                "id": "108",
+                "index": 38,
+                "parentId": "74",
+                "title": "ngrok documentation",
+                "url": "https://ngrok.com/docs"
+              },
+              {
+                "dateAdded": 1675280227324,
+                "id": "109",
+                "index": 39,
+                "parentId": "74",
+                "title": "ngrok",
+                "url": "https://dashboard.ngrok.com/get-started/setup"
+              },
+              {
+                "dateAdded": 1675366267876,
+                "id": "110",
+                "index": 40,
+                "parentId": "74",
+                "title": "Hasura | Instant GraphQL APIs on your data",
+                "url": "https://hasura.io/"
+              },
+              {
+                "dateAdded": 1676399029686,
+                "id": "138",
+                "index": 41,
+                "parentId": "74",
+                "title": "GitHub Pages",
+                "url": "https://pages.github.com/"
+              },
+              {
+                "dateAdded": 1677427543802,
+                "id": "150",
+                "index": 42,
+                "parentId": "74",
+                "title": "Warp: Terminal",
+                "url": "https://www.warp.dev/"
+              },
+              {
+                "dateAdded": 1677436739905,
+                "id": "151",
+                "index": 43,
+                "parentId": "74",
+                "title": "React Native",
+                "url": "https://reactnative.dev/"
+              },
+              {
+                "dateAdded": 1677607591916,
+                "id": "156",
+                "index": 44,
+                "parentId": "74",
+                "title": "Shodan Search Engine",
+                "url": "https://www.shodan.io/"
+              },
+              {
+                "dateAdded": 1680542135678,
+                "dateLastUsed": 1701193334651,
+                "id": "180",
+                "index": 45,
+                "parentId": "74",
+                "title": "web.dev",
+                "url": "https://web.dev/"
+              },
+              {
+                "dateAdded": 1680802225587,
+                "id": "183",
+                "index": 46,
+                "parentId": "74",
+                "title": "Tally | Free Online Form Builder",
+                "url": "https://tally.so/"
+              },
+              {
+                "dateAdded": 1697469618773,
+                "id": "236",
+                "index": 47,
+                "parentId": "74",
+                "title": "UI Colors",
+                "url": "https://uicolors.app/browse/tailwind-colors"
+              },
+              {
+                "dateAdded": 1697476400556,
+                "id": "237",
+                "index": 48,
+                "parentId": "74",
+                "title": "Lightweight Charts",
+                "url": "https://tradingview.github.io/lightweight-charts/"
+              },
+              {
+                "dateAdded": 1701853248397,
+                "id": "258",
+                "index": 49,
+                "parentId": "74",
+                "title": "NES.css - NES-style CSS Framework",
+                "url": "https://nostalgic-css.github.io/NES.css/"
+              },
+              {
+                "dateAdded": 1703675595997,
+                "id": "271",
+                "index": 50,
+                "parentId": "74",
+                "title": "bruno",
+                "url": "https://www.usebruno.com/"
+              },
+              {
+                "dateAdded": 1704316557103,
+                "id": "273",
+                "index": 51,
+                "parentId": "74",
+                "title": "React.js Wiki",
+                "url": "https://www.reactjs.wiki/"
+              },
+              {
+                "dateAdded": 1704319005952,
+                "id": "274",
+                "index": 52,
+                "parentId": "74",
+                "title": "readme.so",
+                "url": "https://readme.so/"
+              },
+              {
+                "dateAdded": 1704382326034,
+                "id": "276",
+                "index": 53,
+                "parentId": "74",
+                "title": "fastlane docs",
+                "url": "https://docs.fastlane.tools/"
+              },
+              {
+                "dateAdded": 1704618842535,
+                "id": "277",
+                "index": 54,
+                "parentId": "74",
+                "title": "Phonebook.cz - Intelligence X",
+                "url": "https://phonebook.cz/"
+              },
+              {
+                "dateAdded": 1707835009961,
+                "id": "298",
+                "index": 55,
+                "parentId": "74",
+                "title": "Product Hunt – The best new products in tech.",
+                "url": "https://www.producthunt.com/"
+              },
+              {
+                "dateAdded": 1709456676347,
+                "id": "309",
+                "index": 56,
+                "parentId": "74",
+                "title": "bg.ibelick - ready-to-use background snippets for web developers",
+                "url": "https://bg.ibelick.com/"
+              },
+              {
+                "dateAdded": 1709552493792,
+                "id": "311",
+                "index": 57,
+                "parentId": "74",
+                "title": "React Theme - Flowbite",
+                "url": "https://www.flowbite-react.com/docs/customize/theme"
+              },
+              {
+                "dateAdded": 1710069174384,
+                "id": "314",
+                "index": 58,
+                "parentId": "74",
+                "title": "Lucia Auth",
+                "url": "https://lucia-auth.com/"
+              }
+            ],
+            "dateAdded": 1623847484998,
+            "dateGroupModified": 1710069174384,
+            "id": "74",
+            "index": 6,
+            "parentId": "1",
+            "title": "Dev"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1618246571000,
+                "id": "112",
+                "index": 0,
+                "parentId": "111",
+                "title": "Filmin",
+                "url": "https://www.filmin.es/"
+              },
+              {
+                "dateAdded": 1610359266000,
+                "id": "113",
+                "index": 1,
+                "parentId": "111",
+                "title": "HDFull",
+                "url": "https://hdfull.lv/"
+              },
+              {
+                "dateAdded": 1620566616000,
+                "id": "114",
+                "index": 2,
+                "parentId": "111",
+                "title": "IMDb",
+                "url": "https://www.imdb.com/"
+              },
+              {
+                "dateAdded": 1707062976622,
+                "dateLastUsed": 1707062985534,
+                "id": "281",
+                "index": 3,
+                "parentId": "111",
+                "title": "AGalega",
+                "url": "https://agalega.gal/"
+              }
+            ],
+            "dateAdded": 1623847484999,
+            "dateGroupModified": 1707062976622,
+            "id": "111",
+            "index": 7,
+            "parentId": "1",
+            "title": "TV/Films"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1682445768916,
+                        "id": "202",
+                        "index": 0,
+                        "parentId": "260",
+                        "title": "Leonardo.ai",
+                        "url": "https://leonardo.ai/"
+                      },
+                      {
+                        "dateAdded": 1682445760329,
+                        "id": "201",
+                        "index": 1,
+                        "parentId": "260",
+                        "title": "Midjourney",
+                        "url": "https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F"
+                      },
+                      {
+                        "dateAdded": 1682445703573,
+                        "id": "200",
+                        "index": 2,
+                        "parentId": "260",
+                        "title": "Image Creator from Microsoft Bing",
+                        "url": "https://www.bing.com/create"
+                      }
+                    ],
+                    "dateAdded": 1702123468345,
+                    "dateGroupModified": 1702123492813,
+                    "id": "260",
+                    "index": 0,
+                    "parentId": "224",
+                    "title": "IA"
+                  },
+                  {
+                    "dateAdded": 1696266661447,
+                    "id": "226",
+                    "index": 1,
+                    "parentId": "224",
+                    "title": "Photoshop Online",
+                    "url": "https://creativecloud.adobe.com/cc/photoshop"
+                  },
+                  {
+                    "dateAdded": 1696266681874,
+                    "id": "225",
+                    "index": 2,
+                    "parentId": "224",
+                    "title": "Photopea",
+                    "url": "https://www.photopea.com/"
+                  }
+                ],
+                "dateAdded": 1696266640628,
+                "dateGroupModified": 1702123477363,
+                "id": "224",
+                "index": 0,
+                "parentId": "266",
+                "title": "Gfx"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1702460628931,
+                    "id": "268",
+                    "index": 0,
+                    "parentId": "267",
+                    "title": "Avid Media Composer",
+                    "url": "https://www.avid.com/media-composer"
+                  }
+                ],
+                "dateAdded": 1702460616799,
+                "dateGroupModified": 1702460628931,
+                "id": "267",
+                "index": 1,
+                "parentId": "266",
+                "title": "Video"
+              }
+            ],
+            "dateAdded": 1702460605784,
+            "dateGroupModified": 1702460616801,
+            "id": "266",
+            "index": 8,
+            "parentId": "1",
+            "title": "SIXfilms"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1620559710000,
+                "dateLastUsed": 1680543839142,
+                "id": "116",
+                "index": 0,
+                "parentId": "115",
+                "title": "CoinMarketCap",
+                "url": "https://coinmarketcap.com/es/"
+              },
+              {
+                "dateAdded": 1620559828000,
+                "id": "117",
+                "index": 1,
+                "parentId": "115",
+                "title": "Uphold",
+                "url": "https://wallet.uphold.com/dashboard"
+              },
+              {
+                "dateAdded": 1620559928000,
+                "id": "118",
+                "index": 2,
+                "parentId": "115",
+                "title": "Bitcoin Exchange",
+                "url": "https://www.binance.com/es"
+              }
+            ],
+            "dateAdded": 1623847485000,
+            "dateGroupModified": 1623847485000,
+            "id": "115",
+            "index": 9,
+            "parentId": "1",
+            "title": "Crypto"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1611398078000,
+                "id": "120",
+                "index": 0,
+                "parentId": "119",
+                "title": "LinkedIn",
+                "url": "https://www.linkedin.com/feed/"
+              },
+              {
+                "dateAdded": 1611398056000,
+                "id": "121",
+                "index": 1,
+                "parentId": "119",
+                "title": "InfoJobs",
+                "url": "https://www.infojobs.net/candidate/my-infojobs.xhtml?dgv=1043143518040895578"
+              },
+              {
+                "dateAdded": 1610360990000,
+                "dateLastUsed": 1702123433640,
+                "id": "122",
+                "index": 2,
+                "parentId": "119",
+                "title": "Glassdoor",
+                "url": "https://www.glassdoor.es/"
+              },
+              {
+                "dateAdded": 1611398114000,
+                "id": "123",
+                "index": 3,
+                "parentId": "119",
+                "title": "malditasconsultoras.com",
+                "url": "https://malditasconsultoras.com/"
+              }
+            ],
+            "dateAdded": 1623847485001,
+            "dateGroupModified": 1623847485001,
+            "id": "119",
+            "index": 10,
+            "parentId": "1",
+            "title": "Seek Job"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1527065727000,
+                "dateLastUsed": 1701257363402,
+                "id": "135",
+                "index": 0,
+                "parentId": "250",
+                "title": "The Outline",
+                "url": "https://theoutline.com/"
+              }
+            ],
+            "dateAdded": 1701257550623,
+            "dateGroupModified": 1701257552523,
+            "id": "250",
+            "index": 11,
+            "parentId": "1",
+            "title": "News"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1682440418450,
+                        "id": "197",
+                        "index": 0,
+                        "parentId": "204",
+                        "title": "LanguageTool - Corrector ortográfico, gramatical y de estilo",
+                        "url": "https://languagetool.org/es"
+                      },
+                      {
+                        "dateAdded": 1682445857106,
+                        "id": "205",
+                        "index": 1,
+                        "parentId": "204",
+                        "title": "Paraphrasing Tool - QuillBot AI",
+                        "url": "https://quillbot.com/"
+                      }
+                    ],
+                    "dateAdded": 1682445819956,
+                    "dateGroupModified": 1682445857106,
+                    "id": "204",
+                    "index": 0,
+                    "parentId": "206",
+                    "title": "Language"
+                  }
+                ],
+                "dateAdded": 1682445862706,
+                "dateGroupModified": 1682445879589,
+                "id": "206",
+                "index": 0,
+                "parentId": "124",
+                "title": "IA"
+              },
+              {
+                "dateAdded": 1615588299000,
+                "dateLastUsed": 1682445871837,
+                "id": "126",
+                "index": 1,
+                "parentId": "124",
+                "title": "DeepL",
+                "url": "https://www.deepl.com/translator"
+              },
+              {
+                "dateAdded": 1652108908070,
+                "id": "125",
+                "index": 2,
+                "parentId": "124",
+                "title": "Google Slides Theme and PPT Templates",
+                "url": "https://slidesgo.com/"
+              }
+            ],
+            "dateAdded": 1652108886255,
+            "dateGroupModified": 1682445876510,
+            "id": "124",
+            "index": 12,
+            "parentId": "1",
+            "title": "Utils"
+          },
+          {
+            "dateAdded": 1711539334715,
+            "id": "318",
+            "index": 13,
+            "parentId": "1",
+            "title": "",
+            "url": "https://firebase.google.com/docs/auth/web/github-auth"
+          }
+        ],
+        "dateAdded": 1676298394832,
+        "dateGroupModified": 1711539334715,
+        "id": "1",
+        "index": 0,
+        "parentId": "0",
+        "title": "Barra de marcadores"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "dateAdded": 1707064186166,
+                "id": "289",
+                "index": 0,
+                "parentId": "287",
+                "title": "A Chain Reaction — overreacted",
+                "url": "https://overreacted.io/a-chain-reaction/"
+              },
+              {
+                "dateAdded": 1707064181255,
+                "id": "288",
+                "index": 1,
+                "parentId": "287",
+                "title": "The Two Reacts — overreacted",
+                "url": "https://overreacted.io/the-two-reacts/"
+              }
+            ],
+            "dateAdded": 1707064174170,
+            "dateGroupModified": 1707064186166,
+            "id": "287",
+            "index": 0,
+            "parentId": "2",
+            "title": "Leer mas tarde"
+          }
+        ],
+        "dateAdded": 1676298394832,
+        "dateGroupModified": 1707064174171,
+        "id": "2",
+        "index": 1,
+        "parentId": "0",
+        "title": "Otros marcadores"
+      }
+    ],
+    "dateAdded": 1711461761751,
+    "id": "0",
+    "title": ""
+  }
+]

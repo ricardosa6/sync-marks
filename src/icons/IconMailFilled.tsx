@@ -2,7 +2,7 @@ import { SVGProps } from "react";
 
 export const IconMailFilled = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    className="w-4 h-4 "
+    className="w-4 h-4"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="currentColor"

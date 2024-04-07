@@ -96,24 +96,25 @@ export const LoginPage = () => {
           Sign in
         </Button>
         {/* <Button
-          disabled
-          size={"sm"}
-          color="#24292F"
-          className="bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4
-        focus:outline-none focus:ring-[#24292F]/50 dark:focus:ring-gray-500 dark:hover:bg-[#050708]/50"
-        >
-          <IconGithub className="w-4 h-4 me-2" />
-          Sign in with GitHub
-        </Button> */}
-        {/* <Button
-          disabled
+          disabled={loading}
           size={"sm"}
           color="#4285F4"
+          onClick={handleGoogleAuth}
           className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/10 dark:focus:ring-[#4285F4]/55"
         >
           <IconGoogle className="w-4 h-4 me-2" />
           Sign in with Google
         </Button> */}
+        {/* <Button
+        disabled
+        size={"sm"}
+        color="#24292F"
+        className="bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4
+      focus:outline-none focus:ring-[#24292F]/50 dark:focus:ring-gray-500 dark:hover:bg-[#050708]/50"
+      >
+        <IconGithub className="w-4 h-4 me-2" />
+        Sign in with GitHub
+      </Button> */}
       </form>
 
       <div className="mt-6">

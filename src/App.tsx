@@ -17,9 +17,13 @@ const router = createMemoryRouter([
     children: [
       {
         path: "/",
-        // index: true
         element: <PrivateRoutes />,
-        children: [{ path: "/", element: <HomePage /> }],
+        children: [
+          {
+            path: "/",
+            element: <HomePage />,
+          },
+        ],
         // loader: teamLoader,
       },
       // { path: "*", element: <div>404</div> },
