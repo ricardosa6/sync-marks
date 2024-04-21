@@ -27,9 +27,9 @@ export const HomePage = () => {
     return getDoc(doc(db, "users", auth.currentUser?.uid as string))
       .then((doc) => {
         if (doc.exists()) {
-          console.log("Document data:", doc.data());
+          // console.log("Document data:", doc.data());
           const data = doc.data();
-          console.log("data", data);
+          // console.log("data", data);
           const bookmarks =
             data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
 
