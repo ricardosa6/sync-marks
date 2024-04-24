@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Button } from "flowbite-react";
-import { doc, getDoc } from "firebase/firestore";
 
 import { useAuthContext } from "@/contexts/AuthContext";
 import { useBookmarksContext } from "@/contexts/BookmarksContext";
 
-// import Chrome from "@/lib/chrome/chrome";
 import { Skeleton } from "@/components/Skeleton";
-import { IconCloud } from "@/icons/IconCloud";
-import { auth, db } from "@/lib/firebase/client";
+
+import Service from "@/service/service";
+
+import { IconCloud } from "@/icons";
 
 export const HomePage = () => {
   const authContext = useAuthContext();
@@ -17,47 +17,26 @@ export const HomePage = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleLogout = () => {
-    authContext?.logout();
-  };
-
   const handleSyncBookmarks = async () => {
     setLoading(true);
-
-    return getDoc(doc(db, "users", auth.currentUser?.uid as string))
-      .then((doc) => {
-        if (doc.exists()) {
-          // console.log("Document data:", doc.data());
-          const data = doc.data();
-          // console.log("data", data);
-          const bookmarks =
-            data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
-
-          if (bookmarks) {
-            // refetch();
-
-            chrome.bookmarks.remove("0", () => {
-              chrome.bookmarks.create(bookmarks[0]);
-            });
-          }
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    Service.lock();
+    Service.syncBookmarks(authContext?.currentUser).finally(() => {
+      setLoading(false);
+    });
+    Service.unlock();
   };
 
   return (
-    <section className="flex justify-between items-center flex-col px-6 h-full flex-1 p-4">
+    <section className="flex justify-start items-center flex-col h-full flex-1 px-4 pt-1 pb-4 gap-4">
       <section>
-        <h1 className="text-xl bg-white dark:bg-slate-950">
+        <h1 className="text-lg text-slate-900 dark:text-slate-300">
           👋 Hi {authContext?.currentUser?.email}
         </h1>
         {loadingBookmarks ? (
           <Skeleton className="w-4 h-[8px] my-[5px]" />
         ) : (
-          <p className="flex gap-1 items-center">
-            Total bookmarks synced: {count}
+          <p className="flex gap-1 items-center text-slate-900 dark:text-slate-300 text-opacity-70">
+            Bookmarks synced: {count}
           </p>
         )}
       </section>
@@ -69,18 +48,9 @@ export const HomePage = () => {
           onClick={handleSyncBookmarks}
         >
           <IconCloud className="mr-2 h-5 w-5" />
-          Sync
+          Sync from cloud
         </Button>
       </div>
-      <Button
-        size="sm"
-        color="failure"
-        className=""
-        outline
-        onClick={handleLogout}
-      >
-        Logout
-      </Button>
     </section>
   );
 };

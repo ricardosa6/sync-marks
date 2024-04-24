@@ -19,7 +19,7 @@ const defaultBookmarksContext: BookmarksContextType = {
 };
 
 const BookmarksContext = createContext<BookmarksContextType>(
-  defaultBookmarksContext
+  defaultBookmarksContext,
 );
 
 export const useBookmarksContext = () => {
@@ -32,6 +32,7 @@ export const BookmarksProvider = ({ children }: { children: JSX.Element }) => {
     chrome.bookmarks.BookmarkTreeNode[]
   >([]);
   const [loading, setLoading] = useState(false);
+  const [count, setCount] = useState<number | null>(null);
 
   const fetchBookmarks = async () => {
     if (!authContext?.currentUser?.uid) {
@@ -40,9 +41,17 @@ export const BookmarksProvider = ({ children }: { children: JSX.Element }) => {
 
     return getDoc(doc(db, "users", authContext?.currentUser?.uid))
       .then((response) => {
-        response.exists() &&
-          response.data().bookmarks &&
-          setBookmarks(response.data().bookmarks);
+        if (response.exists()) {
+          response.data().bookmarks && setBookmarks(response.data().bookmarks);
+
+          const bookmarksCount = countBookmarks(response?.data()?.bookmarks);
+
+          setCount(bookmarksCount);
+
+          return chrome.runtime.sendMessage({
+            bookmarksCount: bookmarksCount,
+          });
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -58,7 +67,7 @@ export const BookmarksProvider = ({ children }: { children: JSX.Element }) => {
 
   const value: BookmarksContextType = {
     bookmarks,
-    count: countBookmarks(bookmarks),
+    count: count || 0,
     loading,
     refetch: fetchBookmarks,
   };

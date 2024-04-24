@@ -5,10 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "@/lib/firebase/client";
 
-import { IconMailFilled } from "@/icons/IconMailFilled";
-import { IconPassword } from "@/icons/IconPassword";
-// import { IconGithub } from "@/icons/IconGithub";
-// import { IconGoogle } from "@/icons/IconGoogle";
+import {
+  IconMailFilled,
+  IconPassword /* , IconGithub, IconGoogle*/,
+} from "@/icons";
 
 export const LoginPage = () => {
   const [loading, setLoading] = useState(false);
@@ -22,8 +22,6 @@ export const LoginPage = () => {
 
     const email = event.currentTarget.email.value;
     const password = event.currentTarget.password.value;
-
-    // console.log({ email, password });
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {

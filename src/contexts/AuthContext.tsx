@@ -28,18 +28,22 @@ export const useAuthContext = () => {
   return useContext(AuthContext);
 };
 
-export const AuthProvider = ({ children }: { children: JSX.Element }) => {
+export const AuthProvider = ({
+  children,
+}: {
+  children: JSX.Element[] | JSX.Element;
+}) => {
   const [currentUser, setCurrentUser] = useState<User | null>();
   const [loading, setLoading] = useState(true);
 
   const signup = async (
     email: string,
-    password: string
+    password: string,
   ): Promise<UserCredential> => {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
-      password
+      password,
     );
 
     await setDoc(doc(db, "users", userCredential.user.uid), {

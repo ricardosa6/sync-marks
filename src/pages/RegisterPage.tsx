@@ -2,10 +2,9 @@ import { FormEvent, useState } from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { IconMailFilled } from "@/icons/IconMailFilled";
-import { IconPassword } from "@/icons/IconPassword";
-import { IconShieldCheck } from "@/icons/IconShieldCheck";
 import { useAuthContext } from "@/contexts/AuthContext";
+
+import { IconShieldCheck, IconPassword, IconMailFilled } from "@/icons";
 
 export const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
@@ -33,15 +32,9 @@ export const RegisterPage = () => {
       return;
     }
 
-    console.log({ email, password });
-    authContext?.signup(email, password);
     authContext
       ?.signup(email, password)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
-        console.log(user);
-
+      .then(() => {
         navigate("/");
       })
       .catch((error) => {
@@ -63,7 +56,6 @@ export const RegisterPage = () => {
       <form
         className="flex max-w-md flex-col gap-4 w-full"
         onSubmit={handleSubmit}
-        // onChange={handleFormChange}
       >
         <div>
           <div className="mb-2 block">
