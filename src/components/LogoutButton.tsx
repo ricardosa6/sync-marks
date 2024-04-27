@@ -1,11 +1,16 @@
-import { Button } from "flowbite-react";
-import { Modal } from "./Modal";
 import { useState } from "react";
-import { useAuthContext } from "@/contexts/AuthContext";
+import { Button } from "flowbite-react";
+import { useTranslation } from "react-i18next";
+
 import { IconLogout } from "@/icons";
+
+import { useAuthContext } from "@/contexts/AuthContext";
+
+import { Modal } from "./Modal";
 
 export const LogoutButton = () => {
   const authContext = useAuthContext();
+  const { t } = useTranslation();
 
   const [openModal, setOpenModal] = useState(false);
 
@@ -23,12 +28,11 @@ export const LogoutButton = () => {
     <>
       <Button size="xs" gradientMonochrome="failure" onClick={handleLogout}>
         <IconLogout className="h-4 w-4 mr-1" />
-        Logout
+        {t("signOut.buttonLabel")}
       </Button>
       <Modal
-        title="Confirm logout"
-        body="Are you sure you want to log out? "
-        // ¿Estás seguro de que quieres cerrar sesión?
+        title={t("modal.title")}
+        body={t("modal.message")}
         setOpen={setOpenModal}
         open={openModal}
         primaryButton={
@@ -40,7 +44,7 @@ export const LogoutButton = () => {
             }}
           >
             <IconLogout className="h-4 w-4 mr-1" />
-            Logout
+            {t("signOut.buttonLabel")}
           </Button>
         }
       />

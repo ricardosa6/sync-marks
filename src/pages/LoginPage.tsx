@@ -1,17 +1,17 @@
 import { FormEvent, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button, Label, TextInput } from "flowbite-react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 
 import { auth } from "@/lib/firebase/client";
 
-import {
-  IconMailFilled,
-  IconPassword /* , IconGithub, IconGoogle*/,
-} from "@/icons";
+import { IconMailFilled, IconPassword } from "@/icons";
 
 export const LoginPage = () => {
   const [loading, setLoading] = useState(false);
+
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
 
@@ -36,8 +36,6 @@ export const LoginPage = () => {
         const errorMessage = error.message;
 
         console.error(errorCode, errorMessage);
-
-        // setAppStatusError();
       })
       .finally(() => {
         setLoading(false);
@@ -47,7 +45,7 @@ export const LoginPage = () => {
   return (
     <section className="flex justify-center items-center flex-col p-6">
       <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-300 mb-2">
-        Sign in
+        {t("login.signIn")}
       </h1>
       <form
         className="flex max-w-md flex-col gap-4 w-full"
@@ -55,7 +53,7 @@ export const LoginPage = () => {
       >
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="email" value="Your email" />
+            <Label htmlFor="email" value={t("login.fields.email.label")} />
           </div>
           <TextInput
             disabled={loading}
@@ -71,7 +69,10 @@ export const LoginPage = () => {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="password" value="Your password" />
+            <Label
+              htmlFor="password"
+              value={t("login.fields.password.label")}
+            />
           </div>
           <TextInput
             disabled={loading}

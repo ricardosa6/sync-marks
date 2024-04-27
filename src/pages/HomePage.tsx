@@ -9,11 +9,13 @@ import { Skeleton } from "@/components/Skeleton";
 import Service from "@/service/service";
 
 import { IconCloud } from "@/icons";
+import { useTranslation } from "react-i18next";
 
 export const HomePage = () => {
   const authContext = useAuthContext();
   const { count, /* refetch, */ loading: loadingBookmarks } =
     useBookmarksContext();
+  const { t } = useTranslation();
 
   const [loading, setLoading] = useState(false);
 
@@ -30,13 +32,13 @@ export const HomePage = () => {
     <section className="flex justify-start items-center flex-col h-full flex-1 px-4 pt-1 pb-4 gap-4">
       <section>
         <h1 className="text-lg text-slate-900 dark:text-slate-300">
-          👋 Hi {authContext?.currentUser?.email}
+          {t("home.title", { email: authContext?.currentUser?.email })}
         </h1>
         {loadingBookmarks ? (
           <Skeleton className="w-4 h-[8px] my-[5px]" />
         ) : (
           <p className="flex gap-1 items-center text-slate-900 dark:text-slate-300 text-opacity-70">
-            Bookmarks synced: {count}
+            {t("home.bookmarksSynced", { count })}
           </p>
         )}
       </section>
@@ -48,7 +50,7 @@ export const HomePage = () => {
           onClick={handleSyncBookmarks}
         >
           <IconCloud className="mr-2 h-5 w-5" />
-          Sync from cloud
+          {t("home.sync")}
         </Button>
       </div>
     </section>

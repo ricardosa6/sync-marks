@@ -1,0 +1,35 @@
+{
+  "home": {
+    "bookmarksSynced": "Marcadores sincronizados: {{count}}",
+    "sync": "Sincronizar",
+    "title": "👋 Hola {{email}}"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "login": {
+    "fields": {
+      "email": {
+        "label": "Email"
+      },
+      "password": {
+        "label": "Contraseña"
+      }
+    },
+    "signIn": "Iniciar sesión"
+  },
+  "settings": {
+    "fields": {
+      "languagesLabel": "Selecciona idioma"
+    },
+    "title": "Configuración"
+  },
+  "signOut": {
+    "buttonLabel": "Cerrar sesión",
+    "modal": {
+      "message": "¿Estás seguro de que deseas cerrar sesión?",
+      "title": "Cerrar sesión"
+    }
+  }
+}

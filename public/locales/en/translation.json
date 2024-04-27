@@ -1,0 +1,35 @@
+{
+  "home": {
+    "bookmarksSynced": "Bookmarks synced: {{count}}",
+    "sync": "Sync",
+    "title": "👋 Hi {{email}}"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "login": {
+    "fields": {
+      "email": {
+        "label": "Email"
+      },
+      "password": {
+        "label": "Password"
+      }
+    },
+    "signIn": "Sign In"
+  },
+  "settings": {
+    "fields": {
+      "languagesLabel": "Select language"
+    },
+    "title": "Settings"
+  },
+  "signOut": {
+    "buttonLabel": "Sign out",
+    "modal": {
+      "message": "Are you sure you want to sign out?",
+      "title": "Sign out"
+    }
+  }
+}
