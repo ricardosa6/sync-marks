@@ -1,10 +1,8 @@
-import { Label, Select } from "flowbite-react";
-
 import { LogoutButton } from "@/components/LogoutButton";
 import { useTranslation } from "react-i18next";
 import { LanguageSelect } from "@/components/LanguageSelect";
 
-export const SettingsPage = () => {
+const Settings = () => {
   const { t } = useTranslation();
 
   return (
@@ -19,3 +17,5 @@ export const SettingsPage = () => {
     </section>
   );
 };
+
+export default Settings;

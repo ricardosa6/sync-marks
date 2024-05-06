@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "flowbite-react";
+import { useTranslation } from "react-i18next";
 
 import { useAuthContext } from "@/contexts/AuthContext";
 import { useBookmarksContext } from "@/contexts/BookmarksContext";
@@ -9,23 +10,31 @@ import { Skeleton } from "@/components/Skeleton";
 import Service from "@/service/service";
 
 import { IconCloud } from "@/icons";
-import { useTranslation } from "react-i18next";
 
-export const HomePage = () => {
+const Home = () => {
   const authContext = useAuthContext();
-  const { count, /* refetch, */ loading: loadingBookmarks } =
-    useBookmarksContext();
+  const { count, loading: loadingBookmarks } = useBookmarksContext();
   const { t } = useTranslation();
 
   const [loading, setLoading] = useState(false);
 
   const handleSyncBookmarks = async () => {
     setLoading(true);
-    Service.lock();
-    Service.syncBookmarks(authContext?.currentUser).finally(() => {
-      setLoading(false);
+    await chrome.runtime.sendMessage({
+      service: false,
     });
-    Service.unlock();
+    Service.syncBookmarks(authContext?.currentUser)
+      .then(async ({ count }) => {
+        await chrome.runtime.sendMessage({
+          bookmarksCount: count,
+        });
+      })
+      .finally(async () => {
+        setLoading(false);
+        await chrome.runtime.sendMessage({
+          service: true,
+        });
+      });
   };
 
   return (
@@ -56,3 +65,5 @@ export const HomePage = () => {
     </section>
   );
 };
+
+export default Home;

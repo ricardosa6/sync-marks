@@ -1,6 +1,4 @@
-import { doc, getDoc, setDoc } from "firebase/firestore";
-
-import { User } from "firebase/auth";
+import { User as FirebaseUser } from "firebase/auth";
 
 import {
   cleanBookmarks,
@@ -8,7 +6,10 @@ import {
   addAllBookmarks,
 } from "@/utils/chrome";
 
-import { auth, db } from "@/lib/firebase/client";
+import { User } from "@/types/User";
+
+import { auth, getDoc, setDoc } from "@/lib/firebase/client";
+import { userConverter } from "@/lib/firebase/converters";
 
 class Service {
   private isLocked: boolean;
@@ -17,17 +18,15 @@ class Service {
     this.isLocked = false;
   }
 
-  // Método para bloquear la clase
   public lock(): void {
     this.isLocked = true;
   }
 
-  // Método para desbloquear la clase
   public unlock(): void {
     this.isLocked = false;
   }
 
-  public async saveBookmarks(user?: User | null): Promise<{
+  public async saveBookmarks(user?: FirebaseUser | null): Promise<{
     bookmarks: chrome.bookmarks.BookmarkTreeNode[];
     count: number;
   }> {
@@ -36,60 +35,66 @@ class Service {
     }
 
     return chrome.bookmarks.getTree().then(async (bookmarks) => {
-      return setDoc(
-        doc(db, "users", user.uid),
-        {
+      return setDoc<User>({
+        collection: "users",
+        docId: auth.currentUser?.uid as string,
+        data: {
           bookmarks,
         },
-        { merge: true },
-      ).then(() => {
+        converter: userConverter,
+      }).then(() => {
         const count = countBookmarks(bookmarks);
         return { bookmarks, count };
       });
     });
   }
 
-  public async syncBookmarks(user?: User | null) {
+  public async syncBookmarks(user?: FirebaseUser | null) {
     if (!user?.uid) {
-      return Promise.resolve({ bookmarks: [], count: 0 });
+      return { bookmarks: [], count: 0 };
     }
-    await chrome.runtime.sendMessage({
-      service: false,
-    });
 
-    return getDoc(doc(db, "users", auth.currentUser?.uid as string))
-      .then(async (doc) => {
-        if (doc.exists()) {
-          const data = doc.data();
-          const bookmarks =
-            data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
+    // await chrome.runtime.sendMessage({
+    //   service: false,
+    // });
 
-          if (!bookmarks || bookmarks.length === 0) {
-            return { bookmarks: [], count: 0 };
-          }
-
-          await cleanBookmarks();
-          await addAllBookmarks(bookmarks);
-
-          const bookmarksCount = countBookmarks(bookmarks);
-
-          await chrome.runtime.sendMessage({
-            bookmarksCount: bookmarksCount,
-          });
-
-          return { bookmarks, count: bookmarksCount };
+    return getDoc<User>({
+      collection: "users",
+      docId: auth.currentUser?.uid as string,
+      converter: userConverter,
+    })
+      .then(async (data) => {
+        if (!data) {
+          return { bookmarks: [], count: 0 };
         }
-        return { bookmarks: [], count: 0 };
+
+        const bookmarks =
+          data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
+
+        if (!bookmarks || bookmarks.length === 0) {
+          return { bookmarks: [], count: 0 };
+        }
+
+        await cleanBookmarks();
+        await addAllBookmarks(bookmarks);
+
+        const bookmarksCount = countBookmarks(bookmarks);
+
+        // await chrome.runtime.sendMessage({
+        //   bookmarksCount: bookmarksCount,
+        // });
+
+        return { bookmarks, count: bookmarksCount };
       })
       .catch((error) => {
         console.error(error);
         return { bookmarks: [], count: 0 };
-      })
-      .finally(async () => {
-        await chrome.runtime.sendMessage({
-          service: true,
-        });
       });
+    // .finally(async () => {
+    //   await chrome.runtime.sendMessage({
+    //     service: true,
+    //   });
+    // });
   }
 }
 

@@ -3,12 +3,12 @@ import { Spinner } from "flowbite-react";
 
 import { AppLayout } from "@/layouts/AppLayout";
 
-import { LoginPage } from "@/pages/LoginPage";
-import { RegisterPage } from "@/pages/RegisterPage";
-import { HomePage } from "@/pages/HomePage";
-import { SettingsPage } from "./pages/SettingsPage";
-
 import { PrivateRoutes } from "@/utils/routes";
+
+import Login from "@/pages/Login";
+import Register from "@/pages/Register";
+import Home from "@/pages/Home";
+import Settings from "./pages/Settings";
 
 import "./App.css";
 
@@ -23,22 +23,22 @@ const router = createMemoryRouter([
         children: [
           {
             path: "/",
-            element: <HomePage />,
+            element: <Home />,
           },
           {
             path: "/settings",
-            element: <SettingsPage />,
+            element: <Settings />,
           },
         ],
       },
       // { path: "*", element: <div>404</div> },
       {
         path: "/login",
-        element: <LoginPage />,
+        element: <Login />,
       },
       {
         path: "/register",
-        element: <RegisterPage />,
+        element: <Register />,
       },
     ],
   },
