@@ -61,7 +61,7 @@ const Login = () => {
               <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
             )}
             id="email"
-            placeholder="example@mail.com"
+            placeholder={t("login.fields.email.placeholder")}
             required
             sizing="sm"
             type="email"
@@ -80,7 +80,7 @@ const Login = () => {
               <IconPassword className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
             )}
             id="password"
-            placeholder="Password"
+            placeholder={t("login.fields.password.placeholder")}
             required
             sizing="sm"
             type="password"
@@ -92,7 +92,7 @@ const Login = () => {
           gradientDuoTone="tealToLime"
           type="submit"
         >
-          Sign in
+          {t("login.signIn")}
         </Button>
         {/* <Button
           disabled={loading}
@@ -118,12 +118,12 @@ const Login = () => {
 
       <div className="mt-6">
         <p className="opacity-75 text-pretty text-slate-900 dark:text-slate-300">
-          New here?{" "}
+          {t("signUp.newHere")}{" "}
           <Link
             className="text-blue-600 dark:text-blue-400 hover:opacity-75 cursor-pointer"
-            to="/register"
+            to="/auth/register"
           >
-            Create an account
+            {t("signUp.createAccount")}
           </Link>
         </p>
       </div>

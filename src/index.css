@@ -20,7 +20,7 @@
 body {
   margin: 0;
   min-width: 400px;
-  min-height: 400px;
+  min-height: 320px;
   overflow-y: scroll;
 }
 

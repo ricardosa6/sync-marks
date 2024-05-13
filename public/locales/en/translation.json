@@ -1,4 +1,7 @@
 {
+  "common": {
+    "cancel": "Cancel"
+  },
   "home": {
     "bookmarksSynced": "Bookmarks synced: {{count}}",
     "sync": "Sync",
@@ -11,13 +14,16 @@
   "login": {
     "fields": {
       "email": {
-        "label": "Email"
+        "label": "Email",
+        "placeholder": "example@mail.com"
       },
       "password": {
-        "label": "Password"
+        "label": "Password",
+        "placeholder": "Password"
       }
     },
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "signUp": "Sign up"
   },
   "settings": {
     "fields": {
@@ -30,6 +36,18 @@
     "modal": {
       "message": "Are you sure you want to sign out?",
       "title": "Sign out"
+    }
+  },
+  "signUp": {
+    "createAccount": "Create account",
+    "newHere": "New here?",
+    "register": "Register",
+    "alreadyHaveAccount": "Already have an account?",
+    "fields": {
+      "repeatPassword": {
+        "label": "Repeat password",
+        "placeholder": "Repeat password"
+      }
     }
   }
 }

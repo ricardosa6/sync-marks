@@ -2,6 +2,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { Spinner } from "flowbite-react";
 
 import { AppLayout } from "@/layouts/AppLayout";
+import { AuthLayout } from "./layouts/AuthLayout";
 
 import { PrivateRoutes } from "@/utils/routes";
 
@@ -31,14 +32,19 @@ const router = createMemoryRouter([
           },
         ],
       },
-      // { path: "*", element: <div>404</div> },
       {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/register",
-        element: <Register />,
+        element: <AuthLayout />,
+        path: "/auth",
+        children: [
+          {
+            path: "/auth/login",
+            element: <Login />,
+          },
+          {
+            path: "/auth/register",
+            element: <Register />,
+          },
+        ],
       },
     ],
   },

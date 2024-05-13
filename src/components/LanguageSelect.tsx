@@ -1,14 +1,10 @@
+import { lngs } from "@/utils/language";
 import { Label, Select } from "flowbite-react";
 
 import { useTranslation } from "react-i18next";
 
 export const LanguageSelect = () => {
   const { t, i18n } = useTranslation();
-
-  const lngs = {
-    en: { name: t("languages.en"), nativeName: "English" },
-    es: { name: t("languages.es"), nativeName: "Español" },
-  };
 
   return (
     <div>

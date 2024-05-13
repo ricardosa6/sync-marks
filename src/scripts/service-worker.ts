@@ -108,12 +108,16 @@ chrome.windows.onCreated.addListener(async () => {
           // chrome.action.setBadgeBackgroundColor({ color: "#FFF" });
           // }
         }
-      },
+      }
     );
   });
 });
 
 setInterval(async () => {
+  if (!auth.currentUser?.uid) {
+    return;
+  }
+
   await chrome.bookmarks.getTree().then(async (bookmarks) => {
     return getDoc(doc(db, "users", auth.currentUser?.uid as string)).then(
       async (doc) => {
@@ -140,7 +144,7 @@ setInterval(async () => {
             Service.unlock();
           }
         }
-      },
+      }
     );
   });
 }, 1000 * 5);

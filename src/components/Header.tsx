@@ -1,9 +1,9 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Button, DarkThemeToggle } from "flowbite-react";
 
 import { useAuthContext } from "@/contexts/AuthContext";
 
-import { IconGithub, IconSettingsFilled } from "@/icons";
+import { IconSettingsFilled } from "@/icons";
 
 export const Header = () => {
   const location = useLocation();
@@ -35,12 +35,12 @@ export const Header = () => {
           </NavLink>
         ) : null}
       </div>
-      <p className="text-sm font-semibold text-slate-900 dark:text-slate-300">
-        <Link to="/">Bookmarks sync</Link>
-      </p>
+      {/* <p className="text-sm font-semibold text-slate-900 dark:text-slate-300">
+        <Link to="/">SyncMarks</Link>
+      </p> */}
       <div className="flex flex-grow justify-end basis-0">
         <DarkThemeToggle className="w-8 h-8 p-[4px] flex justify-center items-center focus:ring-0 dark:focus:ring-0" />
-        <a
+        {/* <a
           href="https://github.com/ricardosa6/sync-bookmarks-extension-react"
           target="_blank"
           rel="noreferrer"
@@ -52,7 +52,7 @@ export const Header = () => {
           >
             <IconGithub className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
           </Button>
-        </a>
+        </a> */}
       </div>
     </div>
   );

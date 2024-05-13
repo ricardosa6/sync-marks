@@ -1,12 +1,14 @@
 import { FormEvent, useState } from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { useAuthContext } from "@/contexts/AuthContext";
 
 import { IconShieldCheck, IconPassword, IconMailFilled } from "@/icons";
 
 const Register = () => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [passwordMatch, setPasswordMatch] = useState(true);
 
@@ -51,7 +53,7 @@ const Register = () => {
   return (
     <section className="flex justify-center items-center flex-col p-6">
       <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-300 mb-2">
-        Register
+        {t("signUp.register")}
       </h1>
       <form
         className="flex max-w-md flex-col gap-4 w-full"
@@ -59,7 +61,7 @@ const Register = () => {
       >
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="email" value="Your email" />
+            <Label htmlFor="email" value={t("login.fields.email.label")} />
           </div>
           <TextInput
             disabled={loading}
@@ -67,7 +69,7 @@ const Register = () => {
               <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
             )}
             id="email"
-            placeholder="example@mail.com"
+            placeholder={t("login.fields.email.placeholder")}
             required
             sizing="sm"
             type="email"
@@ -75,7 +77,10 @@ const Register = () => {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="password" value="Your password" />
+            <Label
+              htmlFor="password"
+              value={t("login.fields.password.label")}
+            />
           </div>
           <TextInput
             disabled={loading}
@@ -83,7 +88,7 @@ const Register = () => {
               <IconPassword className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
             )}
             id="password"
-            placeholder="Password"
+            placeholder={t("login.fields.password.placeholder")}
             required
             sizing="sm"
             type="password"
@@ -91,7 +96,10 @@ const Register = () => {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="password" value="Repeat your password" />
+            <Label
+              htmlFor="password"
+              value={t("signUp.fields.repeatPassword.label")}
+            />
           </div>
           <TextInput
             disabled={loading}
@@ -100,7 +108,7 @@ const Register = () => {
               <IconShieldCheck className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
             )}
             id="repeatPassword"
-            placeholder="Repeat your password"
+            placeholder={t("signUp.fields.repeatPassword.placeholder")}
             required
             sizing="sm"
             type="password"
@@ -112,7 +120,7 @@ const Register = () => {
           gradientDuoTone="tealToLime"
           type="submit"
         >
-          Sign up
+          {t("login.signUp")}
         </Button>
         {/* <Button
           disabled
@@ -142,12 +150,12 @@ const Register = () => {
 
       <div className="mt-6">
         <p className="opacity-75 text-pretty text-slate-900 dark:text-slate-300">
-          Already have an account?{" "}
+          {t("signUp.alreadyHaveAccount")}{" "}
           <Link
             className="text-blue-600 dark:text-blue-400 hover:opacity-75 cursor-pointer"
-            to="/login"
+            to="/auth/login"
           >
-            Sign in
+            {t("login.signIn")}
           </Link>
         </p>
       </div>

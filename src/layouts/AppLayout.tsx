@@ -1,7 +1,6 @@
 import { Flowbite } from "flowbite-react";
 import { Outlet } from "react-router-dom";
 
-import { Header } from "@/components/Header";
 import { AuthProvider } from "@/contexts/AuthContext";
 
 export const AppLayout = () => {
@@ -13,7 +12,6 @@ export const AppLayout = () => {
       </div>
       <div className="flex flex-col h-full">
         <AuthProvider>
-          <Header />
           <Outlet />
         </AuthProvider>
       </div>

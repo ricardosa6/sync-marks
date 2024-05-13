@@ -31,8 +31,8 @@ export const LogoutButton = () => {
         {t("signOut.buttonLabel")}
       </Button>
       <Modal
-        title={t("modal.title")}
-        body={t("modal.message")}
+        title={t("signOut.modal.title")}
+        body={t("signOut.modal.message")}
         setOpen={setOpenModal}
         open={openModal}
         primaryButton={

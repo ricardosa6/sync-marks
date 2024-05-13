@@ -26,7 +26,11 @@ export const useBookmarksContext = () => {
   return useContext(BookmarksContext);
 };
 
-export const BookmarksProvider = ({ children }: { children: JSX.Element }) => {
+export const BookmarksProvider = ({
+  children,
+}: {
+  children: JSX.Element | JSX.Element[];
+}) => {
   const authContext = useAuthContext();
   const [bookmarks, setBookmarks] = useState<
     chrome.bookmarks.BookmarkTreeNode[]

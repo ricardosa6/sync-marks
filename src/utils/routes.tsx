@@ -3,6 +3,7 @@ import { Spinner } from "flowbite-react";
 
 import { useAuthContext } from "@/contexts/AuthContext";
 import { BookmarksProvider } from "@/contexts/BookmarksContext";
+import { Header } from "@/components/Header";
 
 export const PrivateRoutes = () => {
   const auth = useAuthContext();
@@ -17,9 +18,10 @@ export const PrivateRoutes = () => {
 
   return auth?.currentUser ? (
     <BookmarksProvider>
+      <Header />
       <Outlet />
     </BookmarksProvider>
   ) : (
-    <Navigate to="/login" />
+    <Navigate to="/auth/login" />
   );
 };
