@@ -2,14 +2,7 @@
   "name": "Sync Marks",
   "version": "1.0.0",
   "manifest_version": 3,
-  "permissions": [
-    "storage",
-    "bookmarks",
-    "scripting",
-    "identity",
-    "nativeMessaging",
-    "tabs"
-  ],
+  "permissions": ["bookmarks", "nativeMessaging"],
   "action": {
     "default_popup": "index.html"
   },
