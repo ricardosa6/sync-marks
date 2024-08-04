@@ -1,4 +1,7 @@
 {
+  "auth": {
+    "auth/invalid-credential": "Incorrect email or password"
+  },
   "common": {
     "cancel": "Cancel"
   },

@@ -18,7 +18,7 @@ export function countBookmarks(tree: chrome.bookmarks.BookmarkTreeNode[]) {
 }
 
 export async function addAllBookmarks(
-  bookmarks: chrome.bookmarks.BookmarkTreeNode[],
+  bookmarks: chrome.bookmarks.BookmarkTreeNode[]
 ): Promise<void> {
   if (!bookmarks) {
     Promise.reject(new Error("Failed to get bookmarks tree"));
@@ -26,7 +26,7 @@ export async function addAllBookmarks(
   }
 
   const childrenSortedByIndexAsc = bookmarks[0].children?.sort(
-    (a, b) => b.index! - a.index!,
+    (a, b) => b.index! - a.index!
   );
 
   const stack = [...childrenSortedByIndexAsc!]; // Creamos una copia del árbol
@@ -73,9 +73,11 @@ export async function addAllBookmarks(
       stack.push(...(nodesSortedByIndexAsc || []));
     }
   }
+
+  return;
 }
 
-export async function cleanBookmarks(): Promise<void> {
+export async function clearBookmarks(): Promise<void> {
   return chrome.bookmarks.getTree().then((tree) => {
     if (!tree) {
       throw new Error("Failed to get bookmarks tree");

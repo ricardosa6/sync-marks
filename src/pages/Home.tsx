@@ -7,9 +7,9 @@ import { useBookmarksContext } from "@/contexts/BookmarksContext";
 
 import { Skeleton } from "@/components/Skeleton";
 
-import Service from "@/service/service";
-
 import { IconCloud } from "@/icons";
+
+import { Message } from "@/utils/constants/messages";
 
 const Home = () => {
   const authContext = useAuthContext();
@@ -20,21 +20,11 @@ const Home = () => {
 
   const handleSyncBookmarks = async () => {
     setLoading(true);
-    await chrome.runtime.sendMessage({
-      service: false,
-    });
-    Service.syncBookmarks(authContext?.currentUser)
-      .then(async ({ count }) => {
-        await chrome.runtime.sendMessage({
-          bookmarksCount: count,
-        });
-      })
-      .finally(async () => {
-        setLoading(false);
-        await chrome.runtime.sendMessage({
-          service: true,
-        });
-      });
+
+    await chrome.runtime.sendMessage("lock" as Message);
+    await chrome.runtime.sendMessage("syncBookmarks" as Message);
+    await chrome.runtime.sendMessage("unlock" as Message);
+    setLoading(false);
   };
 
   return (

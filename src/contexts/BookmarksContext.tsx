@@ -1,8 +1,11 @@
-import { doc, getDoc } from "firebase/firestore";
 import { createContext, useContext, useEffect, useState } from "react";
-import { useAuthContext } from "./AuthContext";
-import { db } from "@/lib/firebase/client";
+import { doc, getDoc } from "firebase/firestore";
+
+import { db } from "@/lib/firebase";
+
 import { countBookmarks } from "@/utils/chrome";
+
+import { useAuthContext } from "./AuthContext";
 
 type BookmarksContextType = {
   bookmarks: chrome.bookmarks.BookmarkTreeNode[];
@@ -19,7 +22,7 @@ const defaultBookmarksContext: BookmarksContextType = {
 };
 
 const BookmarksContext = createContext<BookmarksContextType>(
-  defaultBookmarksContext,
+  defaultBookmarksContext
 );
 
 export const useBookmarksContext = () => {
@@ -52,9 +55,11 @@ export const BookmarksProvider = ({
 
           setCount(bookmarksCount);
 
-          return chrome.runtime.sendMessage({
-            bookmarksCount: bookmarksCount,
-          });
+          return;
+
+          // return chrome.runtime.sendMessage({
+          //   bookmarksCount: bookmarksCount,
+          // });
         }
       })
       .catch((error) => {

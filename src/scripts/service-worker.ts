@@ -1,12 +1,18 @@
-import { auth, db } from "@/lib/firebase/client";
-import { doc, getDoc } from "firebase/firestore";
+import { auth } from "@/lib/firebase";
 
-import Service from "@/service/service";
+import Service from "@/services/Service";
 
-import { countBookmarks } from "@/utils/chrome";
+import { Message } from "@/utils/constants/messages";
+
+// 5 minutes interval in milliseconds
+const INTERVAL = 10 * 60 * 1000;
 
 chrome.bookmarks.onCreated.addListener(async (/* id, bookmark */) => {
   if (!auth.currentUser?.uid) {
+    return;
+  }
+
+  if (Service.isLocked()) {
     return;
   }
 
@@ -27,6 +33,10 @@ chrome.bookmarks.onRemoved.addListener(async (/* id, removeInfo */) => {
     return;
   }
 
+  if (Service.isLocked()) {
+    return;
+  }
+
   // await chrome.bookmarks.getTree().then((bookmarks) => {
   //   const count = countBookmarks(bookmarks);
 
@@ -39,78 +49,61 @@ chrome.bookmarks.onRemoved.addListener(async (/* id, removeInfo */) => {
   await Service.saveBookmarks(auth.currentUser);
 });
 
-chrome.bookmarks.onChanged.addListener((/* id, changeInfo */) => {
+chrome.bookmarks.onChanged.addListener(async (/* id, changeInfo */) => {
   if (!auth.currentUser?.uid) {
     return;
   }
 
-  Service.saveBookmarks(auth.currentUser);
-});
-
-chrome.runtime.onMessage.addListener((message /*, sender, sendResponse*/) => {
-  if (message.service === false) {
-    Service.lock();
+  if (Service.isLocked()) {
     return;
   }
 
-  if (message.service === true) {
-    Service.unlock();
-    return;
-  }
-
-  // TODO: Show badges with bookmarks count
-
-  // if (message.bookmarksCount) {
-  //   chrome.action.setBadgeText({
-  //     text: message.bookmarksCount.toString(),
-  //   });
-  //   chrome.action.setBadgeBackgroundColor({ color: "#222222" });
-  //   chrome.action.setBadgeTextColor({ color: "#FFF" });
-  // }
+  await Service.saveBookmarks(auth.currentUser);
 });
+
+chrome.runtime.onMessage.addListener(
+  (message: Message /*, sender, sendResponse*/) => {
+    const actions: { [key in Message]: () => void } = {
+      unlock: () => Service.unlock(),
+      lock: () => Service.lock(),
+      syncBookmarks: () => Service.syncBookmarks(auth.currentUser),
+      saveBookmarks: () => Service.saveBookmarks(auth.currentUser),
+    };
+
+    if (actions[message]) {
+      actions[message]();
+    }
+
+    return true;
+
+    // TODO: Show badges with bookmarks count
+    // if (message.bookmarksCount) {
+    //   chrome.action.setBadgeText({
+    //     text: message.bookmarksCount.toString(),
+    //   });
+    //   chrome.action.setBadgeBackgroundColor({ color: "#222222" });
+    //   chrome.action.setBadgeTextColor({ color: "#FFF" });
+    // }
+  }
+);
 
 chrome.windows.onCreated.addListener(async () => {
   if (!auth.currentUser?.uid) {
     return;
   }
 
-  await chrome.bookmarks.getTree().then(async (bookmarks) => {
-    return getDoc(doc(db, "users", auth.currentUser?.uid as string)).then(
-      async (doc) => {
-        if (doc.exists()) {
-          const data = doc.data();
-          const firestoreBookmarks =
-            data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
+  Service.lock();
 
-          if (!firestoreBookmarks || firestoreBookmarks.length === 0) {
-            return;
-          }
+  await Service.compareUpdates(auth.currentUser);
 
-          const firestoreBookmarksCount = countBookmarks(firestoreBookmarks);
-          const browserBookmarksCount = countBookmarks(bookmarks);
+  // wait 1 second before unlock
+  setTimeout(() => {
+    Service.unlock();
+  }, 1000);
 
-          if (firestoreBookmarksCount !== browserBookmarksCount) {
-            // TODO: Show badges with alert for sync
-            // chrome.action.setBadgeText({
-            //   text: "!",
-            // });
-            // chrome.action.setBadgeBackgroundColor({ color: "#FF3333" });
-            // chrome.action.setBadgeTextColor({ color: "#FFF" });
-            Service.lock();
-            await Service.syncBookmarks(auth.currentUser);
-            Service.unlock();
-          }
-          // TODO: Show badges with bookmarks count
-          // else {
-          // chrome.action.setBadgeText({
-          //   text: browserBookmarksCount.toString(),
-          // });
-          // chrome.action.setBadgeBackgroundColor({ color: "#FFF" });
-          // }
-        }
-      }
-    );
-  });
+  Service.unlock();
+
+  return;
 });
 
 setInterval(async () => {
@@ -118,33 +111,16 @@ setInterval(async () => {
     return;
   }
 
-  await chrome.bookmarks.getTree().then(async (bookmarks) => {
-    return getDoc(doc(db, "users", auth.currentUser?.uid as string)).then(
-      async (doc) => {
-        if (doc.exists()) {
-          const data = doc.data();
-          const firestoreBookmarks =
-            data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
+  Service.lock();
 
-          if (!firestoreBookmarks || firestoreBookmarks.length === 0) {
-            return;
-          }
+  await Service.compareUpdates(auth.currentUser);
 
-          const firestoreBookmarksCount = countBookmarks(firestoreBookmarks);
-          const browserBookmarksCount = countBookmarks(bookmarks);
+  // wait 1 second before unlock
+  setTimeout(() => {
+    Service.unlock();
+  }, 1000);
 
-          if (firestoreBookmarksCount !== browserBookmarksCount) {
-            // chrome.action.setBadgeText({
-            //   text: "!",
-            // });
-            // chrome.action.setBadgeBackgroundColor({ color: "#FF3333" });
-            // chrome.action.setBadgeTextColor({ color: "#FFF" });
-            Service.lock();
-            await Service.syncBookmarks(auth.currentUser);
-            Service.unlock();
-          }
-        }
-      }
-    );
-  });
-}, 1000 * 5);
+  return;
+}, INTERVAL);
+
+(async () => await Service.compareUpdates(auth.currentUser))();

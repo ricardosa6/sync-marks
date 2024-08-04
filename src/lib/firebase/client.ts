@@ -37,7 +37,7 @@ export const setDoc = async <T>({
   converter: FirestoreDataConverter<T>;
 }) => {
   const documentRef = doc(db, collection, docId).withConverter(converter);
-  return setDocFirebase(documentRef, data, { merge: true });
+  return setDocFirebase(documentRef, data, { merge: false });
 };
 
 export const getDoc = async <T>({

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
+import { auth, db } from "@/lib/firebase";
 import {
   User,
   UserCredential,
@@ -9,7 +9,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import { auth, db } from "@/lib/firebase/client";
 import { doc, setDoc } from "firebase/firestore";
 
 type AuthContextType = {
@@ -38,12 +37,12 @@ export const AuthProvider = ({
 
   const signup = async (
     email: string,
-    password: string,
+    password: string
   ): Promise<UserCredential> => {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
-      password,
+      password
     );
 
     await setDoc(doc(db, "users", userCredential.user.uid), {

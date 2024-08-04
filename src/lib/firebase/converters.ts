@@ -8,18 +8,21 @@ import { User } from "@/types/User";
 
 export const userConverter = {
   toFirestore(user: User): DocumentData {
-    return {
-      uid: user.uid,
-      email: user.email,
-      bookmarks: user.bookmarks,
-    };
+    return Object.fromEntries(
+      Object.entries(user).filter(([_, value]) => value !== undefined)
+    );
   },
 
   fromFirestore(
     snapshot: QueryDocumentSnapshot,
-    options: SnapshotOptions,
+    options: SnapshotOptions
   ): User {
     const data = snapshot.data(options)!;
-    return { uid: data.uid, email: data.email, bookmarks: data.bookmarks };
+    return {
+      uid: data.uid,
+      email: data.email,
+      bookmarks: data.bookmarks,
+      lastUpdatedAt: data.lastUpdatedAt,
+    };
   },
 };

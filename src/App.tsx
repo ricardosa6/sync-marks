@@ -6,12 +6,12 @@ import { AuthLayout } from "./layouts/AuthLayout";
 
 import { PrivateRoutes } from "@/utils/routes";
 
-import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Home from "@/pages/Home";
 import Settings from "./pages/Settings";
 
 import "./App.css";
+import Login from "./pages/Login/Login";
 
 const router = createMemoryRouter([
   {
