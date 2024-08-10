@@ -29,7 +29,12 @@
   },
   "settings": {
     "fields": {
-      "languagesLabel": "Selecciona idioma"
+      "languagesLabel": "Idioma",
+      "root": {
+        "helperText": "Lugar donde se almacenarán todos los marcadores sincronizados en la barra de marcadores del navegador.",
+        "label": "Raíz",
+        "placeholder": "./SyncMarks"
+      }
     },
     "title": "Configuración"
   },
@@ -41,15 +46,16 @@
     }
   },
   "signUp": {
-    "createAccount": "Crear cuenta",
-    "newHere": "Eres nuevo?",
-    "register": "Registro",
     "alreadyHaveAccount": "Ya tienes una cuenta?",
+    "createAccount": "Crear cuenta",
     "fields": {
       "repeatPassword": {
+        "doesNotMatch": "Las contraseñas no coinciden",
         "label": "Repite contraseña",
         "placeholder": "Repite contraseña"
       }
-    }
+    },
+    "newHere": "Eres nuevo?",
+    "register": "Registro"
   }
 }

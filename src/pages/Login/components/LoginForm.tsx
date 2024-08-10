@@ -1,12 +1,13 @@
 import { FormEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Label, TextInput } from "flowbite-react";
+import { Button } from "flowbite-react";
 import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 import { auth } from "@/lib/firebase";
 
-import { IconMailFilled, IconPassword } from "@/icons";
+import { IconMailFilled, IconPassword } from "@/modules/shared/icons";
+import { TextField } from "@/modules/shared/components";
 
 export const LoginForm = () => {
   const { t } = useTranslation();
@@ -23,17 +24,13 @@ export const LoginForm = () => {
     const email = event.currentTarget.email.value;
     const password = event.currentTarget.password.value;
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((/* userCredential */) => {
-        // Signed up
-        // const user = userCredential.user;
-        // console.log(user)
-
+    return signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        setError(null);
         navigate("/");
       })
       .catch((error: AuthError) => {
         const errorCode = error.code;
-
         setError(errorCode);
       })
       .finally(() => {
@@ -43,44 +40,34 @@ export const LoginForm = () => {
 
   return (
     <form className="flex max-w-md flex-col gap-4 w-full" onSubmit={signUp}>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="email" value={t("login.fields.email.label")} />
-        </div>
-        <TextInput
-          color={Boolean(error) ? "failure" : undefined}
-          disabled={loading}
-          icon={() => (
-            <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
-          )}
-          id="email"
-          placeholder={t("login.fields.email.placeholder")}
-          required
-          sizing="sm"
-          type="email"
-        />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="password" value={t("login.fields.password.label")} />
-        </div>
-        <TextInput
-          color={Boolean(error) ? "failure" : undefined}
-          disabled={loading}
-          icon={() => (
-            <IconPassword className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
-          )}
-          id="password"
-          placeholder={t("login.fields.password.placeholder")}
-          required
-          sizing="sm"
-          type="password"
-        />
-      </div>
+      <TextField
+        label={t("login.fields.email.label")}
+        color={Boolean(error) ? "failure" : undefined}
+        disabled={loading}
+        icon={() => (
+          <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
+        )}
+        id="email"
+        placeholder={t("login.fields.email.placeholder")}
+        required
+        sizing="sm"
+        type="email"
+      />
+      <TextField
+        label={t("login.fields.password.label")}
+        color={Boolean(error) ? "failure" : undefined}
+        disabled={loading}
+        icon={() => (
+          <IconPassword className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
+        )}
+        id="password"
+        placeholder={t("login.fields.password.placeholder")}
+        required
+        sizing="sm"
+        type="password"
+      />
       {error && (
-        <div className="text-red-500 text-sm font-medium">
-          {t(`auth.${error}`)}
-        </div>
+        <p className="text-red-500 text-sm font-medium">{t(`auth.${error}`)}</p>
       )}
       <Button
         disabled={loading}

@@ -4,9 +4,9 @@ import {
   clearBookmarks,
   countBookmarks,
   addAllBookmarks,
-} from "@/utils/chrome";
+} from "@/modules/shared/utils";
 
-import { User } from "@/types/User";
+import { User } from "@/modules/shared/types";
 
 import { getDoc, setDoc, userConverter } from "@/lib/firebase";
 

@@ -30,7 +30,12 @@
   },
   "settings": {
     "fields": {
-      "languagesLabel": "Select language"
+      "languagesLabel": "Language",
+      "root": {
+        "helperText": "Location where all synced bookmarks will be stored in the browser’s bookmarks bar.",
+        "label": "Root",
+        "placeholder": "./SyncMarks"
+      }
     },
     "title": "Settings"
   },
@@ -42,15 +47,16 @@
     }
   },
   "signUp": {
-    "createAccount": "Create account",
-    "newHere": "New here?",
-    "register": "Register",
     "alreadyHaveAccount": "Already have an account?",
+    "createAccount": "Create account",
     "fields": {
       "repeatPassword": {
+        "doesNotMatch": "Passwords do not match",
         "label": "Repeat password",
         "placeholder": "Repeat password"
       }
-    }
+    },
+    "newHere": "New here?",
+    "register": "Register"
   }
 }

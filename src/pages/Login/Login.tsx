@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { LoginForm } from "./components";
 
-const Login = () => {
+export const Login = () => {
   const { t } = useTranslation();
 
   return (
@@ -26,5 +26,3 @@ const Login = () => {
     </section>
   );
 };
-
-export default Login;

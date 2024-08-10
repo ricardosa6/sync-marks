@@ -2,10 +2,12 @@ import { auth } from "@/lib/firebase";
 
 import Service from "@/services/Service";
 
-import { Message } from "@/utils/constants/messages";
+import { Message } from "@/modules/shared/utils/constants/messages";
 
 // 5 minutes interval in milliseconds
 const INTERVAL = 10 * 60 * 1000;
+
+console.log("pasa por aqui");
 
 chrome.bookmarks.onCreated.addListener(async (/* id, bookmark */) => {
   if (!auth.currentUser?.uid) {
@@ -61,31 +63,29 @@ chrome.bookmarks.onChanged.addListener(async (/* id, changeInfo */) => {
   await Service.saveBookmarks(auth.currentUser);
 });
 
-chrome.runtime.onMessage.addListener(
-  (message: Message /*, sender, sendResponse*/) => {
-    const actions: { [key in Message]: () => void } = {
-      unlock: () => Service.unlock(),
-      lock: () => Service.lock(),
-      syncBookmarks: () => Service.syncBookmarks(auth.currentUser),
-      saveBookmarks: () => Service.saveBookmarks(auth.currentUser),
-    };
+chrome.runtime.onMessage.addListener((message: Message) => {
+  const actions: { [key in Message]: () => void } = {
+    unlock: () => Service.unlock(),
+    lock: () => Service.lock(),
+    syncBookmarks: () => Service.syncBookmarks(auth.currentUser),
+    saveBookmarks: () => Service.saveBookmarks(auth.currentUser),
+  };
 
-    if (actions[message]) {
-      actions[message]();
-    }
-
-    return true;
-
-    // TODO: Show badges with bookmarks count
-    // if (message.bookmarksCount) {
-    //   chrome.action.setBadgeText({
-    //     text: message.bookmarksCount.toString(),
-    //   });
-    //   chrome.action.setBadgeBackgroundColor({ color: "#222222" });
-    //   chrome.action.setBadgeTextColor({ color: "#FFF" });
-    // }
+  if (actions[message]) {
+    actions[message]();
   }
-);
+
+  return true;
+
+  // TODO: Show badges with bookmarks count
+  // if (message.bookmarksCount) {
+  //   chrome.action.setBadgeText({
+  //     text: message.bookmarksCount.toString(),
+  //   });
+  //   chrome.action.setBadgeBackgroundColor({ color: "#222222" });
+  //   chrome.action.setBadgeTextColor({ color: "#FFF" });
+  // }
+});
 
 chrome.windows.onCreated.addListener(async () => {
   if (!auth.currentUser?.uid) {
