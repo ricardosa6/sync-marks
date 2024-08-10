@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "firebase": "^10.12.4",
-    "firebase-admin": "^12.3.0",
+    "firebase": "^10.12.5",
+    "firebase-admin": "^12.3.1",
     "flowbite-react": "^0.10.1",
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^8.0.0",
@@ -20,30 +20,30 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",
-    "react-i18next": "^15.0.0",
-    "react-router-dom": "^6.25.1",
+    "react-i18next": "^15.0.1",
+    "react-router-dom": "^6.26.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.23",
     "@types/chrome": "^0.0.269",
-    "@types/node": "^22.0.0",
+    "@types/node": "^22.2.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.35.0",
-    "postcss": "^8.4.40",
+    "postcss": "^8.4.41",
     "prettier": "3.3.3",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.9",
     "typescript": "^5.5.4",
-    "vite": "^5.3.5"
+    "vite": "^5.4.0"
   },
   "overrides": {
-    "undici": "6.19.4"
+    "undici": "6.19.7"
   }
 }
