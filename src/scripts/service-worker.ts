@@ -1,13 +1,13 @@
 import { auth } from "@/lib/firebase";
+import { Message } from "@/modules/shared/utils";
 
 import Service from "@/services/Service";
-
-import { Message } from "@/modules/shared/utils/constants/messages";
 
 // 5 minutes interval in milliseconds
 const INTERVAL = 10 * 60 * 1000;
 
 console.log("pasa por aqui");
+// TODO: usar localstorage para saber si es la primera vez que se ejecuta la extension
 
 chrome.bookmarks.onCreated.addListener(async (/* id, bookmark */) => {
   if (!auth.currentUser?.uid) {
