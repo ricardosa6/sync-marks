@@ -1,6 +1,12 @@
-export type Message = "unlock" | "lock" | "syncBookmarks" | "saveBookmarks";
+export type Message =
+  | "unlock"
+  | "lock"
+  | "syncBookmarks"
+  | "saveBookmarks"
+  | "compareSources";
 
-export const UNLOCK = "unlock" as Message;
-export const LOCK = "lock" as Message;
-export const SYNC_BOOKMARKS = "syncBookmarks" as Message;
-export const SAVE_BOOKMARKS = "saveBookmarks" as Message;
+export const UNLOCK: Message = "unlock";
+export const LOCK: Message = "lock";
+export const SYNC_BOOKMARKS: Message = "syncBookmarks";
+export const SAVE_BOOKMARKS: Message = "saveBookmarks";
+export const COMPARE_SOURCES: Message = "compareSources";

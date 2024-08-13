@@ -4,7 +4,7 @@ import {
   SnapshotOptions,
 } from "firebase/firestore";
 
-import { User } from "@/types/User";
+import { User } from "@/modules/shared/types";
 
 export const userConverter = {
   toFirestore(user: User): DocumentData {
@@ -23,6 +23,7 @@ export const userConverter = {
       email: data.email,
       bookmarks: data.bookmarks,
       lastUpdatedAt: data.lastUpdatedAt,
+      browsers: data.browsers,
     };
   },
 };

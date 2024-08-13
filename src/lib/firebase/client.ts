@@ -1,10 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { FirestoreDataConverter, getFirestore } from "firebase/firestore";
+
 import {
+  FirestoreDataConverter,
+  getFirestore,
   doc,
   getDoc as getDocFirebase,
   setDoc as setDocFirebase,
+  updateDoc as updateDocFirebase,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -57,4 +60,19 @@ export const getDoc = async <T>({
     }
     return undefined;
   });
+};
+
+export const updateDoc = async <T>({
+  collection,
+  converter,
+  data,
+  docId,
+}: {
+  collection: string;
+  converter: FirestoreDataConverter<T>;
+  data: Partial<T>;
+  docId: string;
+}) => {
+  const documentRef = doc(db, collection, docId).withConverter(converter);
+  return updateDocFirebase(documentRef, data);
 };

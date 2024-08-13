@@ -25,7 +25,7 @@ export const LoginForm = () => {
     const password = event.currentTarget.password.value;
 
     return signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
+      .then(async () => {
         setError(null);
         navigate("/");
       })

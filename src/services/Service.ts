@@ -17,14 +17,35 @@ class Service {
     this.locked = false;
   }
 
+  /**
+   * Lock service
+   * @returns void
+   *
+   * @example
+   * Service.lock();
+   */
   lock() {
     this.locked = true;
   }
 
+  /**
+   * Unlock service
+   * @returns void
+   *
+   * @example
+   * Service.unlock();
+   */
   unlock() {
     this.locked = false;
   }
 
+  /**
+   * Check if service is locked
+   * @returns boolean
+   *
+   * @example
+   * const isLocked = Service.isLocked();
+   */
   isLocked() {
     return this.locked;
   }
@@ -48,15 +69,39 @@ class Service {
       return { bookmarks: [], count: 0 };
     }
 
-    const lastUpdatedAt = new Date().toISOString();
-
     return chrome.bookmarks.getTree().then(async (bookmarks) => {
+      // In case are not empty
+      const now = new Date();
+
+      let lastUpdatedAtDate = now;
+
+      const bookmarksBar = bookmarks[0].children?.[0];
+      const bookmarksBarLastUpdate = bookmarksBar?.dateGroupModified;
+      const bookmarksBarLastUpdateDate = bookmarksBarLastUpdate
+        ? new Date(bookmarksBarLastUpdate)
+        : now;
+
+      const otherBookmarks = bookmarks[0].children?.[1];
+      const otherBookmarksLastUpdate = otherBookmarks?.dateGroupModified;
+      const otherBookmarksLastUpdateDate = otherBookmarksLastUpdate
+        ? new Date(otherBookmarksLastUpdate)
+        : now;
+
+      if (
+        bookmarksBarLastUpdateDate.getTime() >
+        otherBookmarksLastUpdateDate.getTime()
+      ) {
+        lastUpdatedAtDate = bookmarksBarLastUpdateDate;
+      } else {
+        lastUpdatedAtDate = otherBookmarksLastUpdateDate;
+      }
+
       return setDoc<User>({
         collection: "users",
         docId: user.uid,
         data: {
           bookmarks,
-          lastUpdatedAt,
+          lastUpdatedAt: lastUpdatedAtDate.toISOString(),
         },
         converter: userConverter,
       }).then(() => {
@@ -90,13 +135,12 @@ class Service {
       docId: user?.uid,
       converter: userConverter,
     })
-      .then(async (data) => {
-        if (!data) {
+      .then(async (storedUser) => {
+        if (!storedUser) {
           return { bookmarks: [], count: 0 };
         }
-
         const bookmarks =
-          data?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
+          storedUser?.bookmarks as chrome.bookmarks.BookmarkTreeNode[];
 
         if (!bookmarks || bookmarks.length === 0) {
           return { bookmarks: [], count: 0 };
@@ -122,7 +166,17 @@ class Service {
     // });
   }
 
-  public async compareUpdates(user?: FirebaseUser | null) {
+  /**
+   * Compare bookmarks from Firestore with browser bookmarks
+   * @param user Firebase user
+   * @returns void
+   * @async
+   *
+   * @example
+   * const user = auth.currentUser;
+   * await Service.compareUpdates(user);
+   */
+  public async compareSources(user?: FirebaseUser | null) {
     if (!user?.uid) {
       return;
     }
@@ -205,9 +259,13 @@ class Service {
             await this.saveBookmarks.bind(this)(user);
           },
         },
-      ].sort((a, b) => b.date.getTime() - a.date.getTime())[0]?.method;
+      ].sort((a, b) => b.date.getTime() - a.date.getTime())[0];
 
-      await action();
+      if (action.date.getTime() === firestoreLastUpdateDate.getTime()) {
+        return;
+      }
+
+      await action.method();
 
       return;
     });

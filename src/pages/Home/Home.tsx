@@ -3,7 +3,6 @@ import { Button } from "flowbite-react";
 import { useTranslation } from "react-i18next";
 
 import { useAuthContext } from "@/modules/auth/contexts";
-
 import { Skeleton } from "@/modules/shared/components";
 import { IconCloud } from "@/modules/shared/icons";
 
@@ -19,10 +18,9 @@ export const Home = () => {
 
   const handleSyncBookmarks = async () => {
     setLoading(true);
-
-    await chrome.runtime.sendMessage(LOCK);
-    await chrome.runtime.sendMessage(SYNC_BOOKMARKS);
-    await chrome.runtime.sendMessage(UNLOCK);
+    await chrome.runtime.sendMessage({ message: LOCK });
+    await chrome.runtime.sendMessage({ message: SYNC_BOOKMARKS });
+    await chrome.runtime.sendMessage({ message: UNLOCK });
     setLoading(false);
   };
 

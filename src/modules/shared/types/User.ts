@@ -3,4 +3,5 @@ export type User = {
   email: string;
   bookmarks?: chrome.bookmarks.BookmarkTreeNode[];
   lastUpdatedAt?: string;
+  browsers: string[];
 };
