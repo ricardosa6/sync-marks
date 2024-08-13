@@ -1,5 +1,6 @@
 import { auth } from "@/lib/firebase";
 import { Message } from "@/modules/shared/utils";
+import i18n from "i18next";
 
 import Service from "@/services/Service";
 
@@ -167,12 +168,12 @@ auth.onAuthStateChanged(async (user) => {
     const bookmarkCreateArg: chrome.bookmarks.BookmarkCreateArg = {
       parentId: "1",
       index: 0,
-      title: "SyncMarks Old Bookmarks",
+      title: `SyncMarks - ${i18n.t("bookmarksBar.oldBookmarks")}`,
     };
     const otherBookmarkCreateArg: chrome.bookmarks.BookmarkCreateArg = {
       parentId: "2",
       index: 1,
-      title: "SyncMarks Old Other Bookmarks",
+      title: `SyncMarks - ${i18n.t("bookmarksBar.oldOtherBookmarks")}`,
     };
     const createdBookmark = await chrome.bookmarks.create(bookmarkCreateArg);
     const otherCreatedBookmark = await chrome.bookmarks.create(

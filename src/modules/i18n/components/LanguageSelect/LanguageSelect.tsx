@@ -1,6 +1,7 @@
 import { Label, Select } from "flowbite-react";
 
 import { useTranslation } from "react-i18next";
+
 import { lngs } from "@/modules/i18n/utils";
 
 interface LanguageSelectProps {

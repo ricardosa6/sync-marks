@@ -1,28 +1,19 @@
 import { useState } from "react";
-import { Button } from "flowbite-react";
+import { Button, Popover } from "flowbite-react";
 import { useTranslation } from "react-i18next";
 
 import { useAuthContext } from "@/modules/auth/contexts";
+
 import { Skeleton } from "@/modules/shared/components";
-import { IconCloud } from "@/modules/shared/icons";
+import { IconInfoCircle } from "@/modules/shared/icons/IconInfoCircle";
 
 import { useBookmarksContext } from "@/modules/bookmarks/contexts";
-import { LOCK, SYNC_BOOKMARKS, UNLOCK } from "@/modules/shared/utils";
+import { SyncButton } from "@/modules/bookmarks/components";
 
 export const Home = () => {
   const authContext = useAuthContext();
   const { count, loading: loadingBookmarks } = useBookmarksContext();
   const { t } = useTranslation();
-
-  const [loading, setLoading] = useState(false);
-
-  const handleSyncBookmarks = async () => {
-    setLoading(true);
-    await chrome.runtime.sendMessage({ message: LOCK });
-    await chrome.runtime.sendMessage({ message: SYNC_BOOKMARKS });
-    await chrome.runtime.sendMessage({ message: UNLOCK });
-    setLoading(false);
-  };
 
   return (
     <section className="flex justify-start items-center flex-col h-full flex-1 px-4 pt-1 pb-4 gap-4">
@@ -38,16 +29,23 @@ export const Home = () => {
           </p>
         )}
       </section>
-      <div className="">
-        <Button
-          isProcessing={loading}
-          size="sm"
-          gradientDuoTone="greenToBlue"
-          onClick={handleSyncBookmarks}
+      <div className="flex flex-row gap-2 items-center">
+        <SyncButton />
+        <Popover
+          aria-labelledby="default-popover"
+          placement="bottom"
+          content={
+            <div className="w-64 text-sm text-gray-500 dark:text-gray-400">
+              <div className="px-3 py-2">
+                <p>{t("home.syncInfoPopover")}</p>
+              </div>
+            </div>
+          }
         >
-          <IconCloud className="mr-2 h-5 w-5" />
-          {t("home.sync")}
-        </Button>
+          <Button size={"xs"} className="p-0 [&>span]:p-0 !bg-transparent">
+            <IconInfoCircle className="text-slate-900 dark:text-slate-300 h-5 w-5" />
+          </Button>
+        </Popover>
       </div>
     </section>
   );

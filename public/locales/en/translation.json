@@ -2,12 +2,21 @@
   "auth": {
     "auth/invalid-credential": "Incorrect email or password"
   },
+  "bookmarksBar": {
+    "oldBookmarks": "Old bookmarks",
+    "oldOtherBookmarks": "Old other bookmarks"
+  },
   "common": {
     "cancel": "Cancel"
   },
   "home": {
     "bookmarksSynced": "Bookmarks synced: {{count}}",
     "sync": "Sync",
+    "syncInfoPopover": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks.",
+    "syncModal": {
+      "message": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks. Are you sure you want to continue?",
+      "title": "Sync bookmarks"
+    },
     "title": "👋 Hi {{email}}"
   },
   "languages": {

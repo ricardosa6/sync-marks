@@ -2,12 +2,21 @@
   "auth": {
     "auth/invalid-credential": "Email o contraseña incorrectos"
   },
+  "bookmarksBar": {
+    "oldBookmarks": "Marcadores antiguos",
+    "oldOtherBookmarks": "Otros marcadores antiguos"
+  },
   "common": {
     "cancel": "Cancelar"
   },
   "home": {
     "bookmarksSynced": "Marcadores sincronizados: {{count}}",
     "sync": "Sincronizar",
+    "syncInfoPopover": "Esta acción eliminará las marcadores actuales de la barra de marcadores y las sustituirá por los marcadores sincronizados.",
+    "syncModal": {
+      "message": "Esta acción eliminará las marcadores actuales de la barra de marcadores y las sustituirá por los marcadores sincronizados. ¿Estás seguro de que deseas continuar?",
+      "title": "Sincronizar marcadores"
+    },
     "title": "👋 Hola {{email}}"
   },
   "languages": {
