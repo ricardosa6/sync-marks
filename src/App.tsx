@@ -50,12 +50,7 @@ const router = createMemoryRouter([
 ]);
 
 function App() {
-  return (
-    <RouterProvider
-      router={router}
-      fallbackElement={<Spinner aria-label="Loading..." />}
-    />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
