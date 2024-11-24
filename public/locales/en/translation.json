@@ -1,0 +1,71 @@
+{
+  "auth": {
+    "auth/invalid-credential": "Incorrect email or password"
+  },
+  "bookmarksBar": {
+    "oldBookmarks": "Old bookmarks",
+    "oldOtherBookmarks": "Old other bookmarks"
+  },
+  "common": {
+    "cancel": "Cancel"
+  },
+  "home": {
+    "bookmarksSynced": "Bookmarks synced: {{count}}",
+    "sync": "Sync",
+    "syncInfoPopover": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks.",
+    "syncModal": {
+      "message": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks. Are you sure you want to continue?",
+      "title": "Sync bookmarks"
+    },
+    "title": "👋 Hi {{email}}"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "login": {
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "example@mail.com"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Password"
+      }
+    },
+    "signIn": "Sign In",
+    "signUp": "Sign up"
+  },
+  "settings": {
+    "fields": {
+      "languagesLabel": "Language",
+      "root": {
+        "helperText": "Location where all synced bookmarks will be stored in the browser’s bookmarks bar.",
+        "label": "Root",
+        "placeholder": "./SyncMarks"
+      }
+    },
+    "title": "Settings"
+  },
+  "signOut": {
+    "buttonLabel": "Sign out",
+    "modal": {
+      "message": "Are you sure you want to sign out?",
+      "title": "Sign out"
+    }
+  },
+  "signUp": {
+    "alreadyHaveAccount": "Already have an account?",
+    "createAccount": "Create account",
+    "fields": {
+      "repeatPassword": {
+        "doesNotMatch": "Passwords do not match",
+        "label": "Repeat password",
+        "placeholder": "Repeat password"
+      }
+    },
+    "newHere": "New here?",
+    "register": "Register"
+  }
+}
