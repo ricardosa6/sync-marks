@@ -1,5 +1,4 @@
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { Spinner } from "flowbite-react";
 
 import { AppLayout } from "@/modules/shared/layouts";
 import { AuthLayout } from "@/modules/auth/layouts";
