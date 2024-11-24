@@ -1,6 +1,6 @@
 import { auth } from "@/lib/firebase";
 import { Message } from "@/modules/shared/utils";
-import i18n from "i18next";
+import i18n from "@/i18n";
 
 import Service from "@/services/Service";
 
@@ -126,30 +126,33 @@ chrome.runtime.onSuspend.addListener(() => {
   chrome.storage.local.clear();
 });
 
-// chrome.runtime.onInstalled.addListener(async (details) => {
-//   if (!auth.currentUser?.uid) {
-//     return;
-//   }
+chrome.runtime.onInstalled.addListener(async (details) => {
+  if (!auth.currentUser?.uid) {
+    return;
+  }
 
-// First install
-// if (details.reason === "install") {
-// const browserId = uuidv4();
-// await setDoc<User>({
-//   collection: "users",
-//   docId: auth.currentUser.uid,
-//   data: {
-//     browserId,
-//   },
-//   converter: userConverter,
-// });
-// chrome.storage.local.set({ browserId });
-// } else if (details.reason === "update") {
-//   const thisVersion = chrome.runtime.getManifest().version;
-//   console.log(
-//     "Updated from " + details.previousVersion + " to " + thisVersion + "!"
-//   );
-// }
-// });
+  // First install
+  if (details.reason === "install") {
+    await chrome.storage.local.set({ SYNC_MARKS__FIRST_SYNC: true });
+
+    // const browserId = uuidv4();
+    // await setDoc<User>({
+    //   collection: "users",
+    //   docId: auth.currentUser.uid,
+    //   data: {
+    //     browserId,
+    //   },
+    //   converter: userConverter,
+    // });
+    // chrome.storage.local.set({ browserId });
+  }
+  // } else if (details.reason === "update") {
+  //   const thisVersion = chrome.runtime.getManifest().version;
+  //   console.log(
+  //     "Updated from " + details.previousVersion + " to " + thisVersion + "!"
+  //   );
+  // }
+});
 
 auth.onAuthStateChanged(async (user) => {
   Service.lock();

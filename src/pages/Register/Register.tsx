@@ -10,10 +10,8 @@ import {
   IconMailFilled,
   IconShieldX,
 } from "@/modules/shared/icons";
-
 import { useAuthContext } from "@/modules/auth/contexts";
 import { TextField } from "@/modules/shared/components";
-import { LOCK, SYNC_BOOKMARKS, UNLOCK } from "@/modules/shared/utils";
 
 export const Register = () => {
   const { t } = useTranslation();
@@ -48,13 +46,9 @@ export const Register = () => {
 
     return authContext
       ?.signup(email, password)
-      .then(async ({ user }) => {
+      .then(async () => {
         setError(null);
         navigate("/");
-
-        await chrome.runtime.sendMessage({ message: LOCK });
-        await chrome.runtime.sendMessage({ message: SYNC_BOOKMARKS, user });
-        await chrome.runtime.sendMessage({ message: UNLOCK });
       })
       .catch((error) => {
         const errorCode = error.code;
