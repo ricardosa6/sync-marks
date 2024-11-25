@@ -44,3 +44,9 @@ jobs:
       # Run tests
       - name: Run tests
         run: npm test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ricardosa6/sync-marks
