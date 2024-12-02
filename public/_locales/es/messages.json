@@ -1,0 +1,98 @@
+{
+  "auth_invalid_credential": {
+    "message": "Email o contraseña incorrectos"
+  },
+  "bookmarksBar_oldBookmarks": {
+    "message": "Marcadores antiguos"
+  },
+  "bookmarksBar_oldOtherBookmarks": {
+    "message": "Otros marcadores antiguos"
+  },
+  "common_cancel": {
+    "message": "Cancelar"
+  },
+  "home_bookmarksSynced": {
+    "message": "Marcadores sincronizados: $1"
+  },
+  "home_sync": {
+    "message": "Sincronizar"
+  },
+  "home_syncInfoPopover": {
+    "message": "Esta acción eliminará las marcadores actuales de la barra de marcadores y las sustituirá por los marcadores sincronizados."
+  },
+  "home_syncModal_message": {
+    "message": "Esta acción eliminará las marcadores actuales de la barra de marcadores y las sustituirá por los marcadores sincronizados. ¿Estás seguro de que deseas continuar?"
+  },
+  "home_syncModal_title": {
+    "message": "Sincronizar marcadores"
+  },
+  "home_title": {
+    "message": "👋 Hola $1"
+  },
+  "languages_en": {
+    "message": "Inglés"
+  },
+  "languages_es": {
+    "message": "Español"
+  },
+  "login_fields_email_label": {
+    "message": "Email"
+  },
+  "login_fields_password_label": {
+    "message": "Contraseña"
+  },
+  "login_fields_password_placeholder": {
+    "message": "Contraseña"
+  },
+  "login_signIn": {
+    "message": "Iniciar sesión"
+  },
+  "login_signUp": {
+    "message": "Registrarse"
+  },
+  "settings_fields_languagesLabel": {
+    "message": "Idioma"
+  },
+  "settings_fields_root_helperText": {
+    "message": "Lugar donde se almacenarán todos los marcadores sincronizados en la barra de marcadores del navegador."
+  },
+  "settings_fields_root_label": {
+    "message": "Raíz"
+  },
+  "settings_fields_root_placeholder": {
+    "message": "./SyncMarks"
+  },
+  "settings_title": {
+    "message": "Configuración"
+  },
+  "signOut_buttonLabel": {
+    "message": "Cerrar sesión"
+  },
+  "signOut_modal_message": {
+    "message": "¿Estás seguro de que deseas cerrar sesión?"
+  },
+  "signOut_modal_title": {
+    "message": "Cerrar sesión"
+  },
+  "signUp_alreadyHaveAccount": {
+    "message": "¿Ya tienes una cuenta?"
+  },
+  "signUp_createAccount": {
+    "message": "Crear cuenta"
+  },
+  "signUp_fields_repeatPassword_doesNotMatch": {
+    "message": "Las contraseñas no coinciden"
+  },
+  "signUp_fields_repeatPassword_label": {
+    "message": "Repite contraseña"
+  },
+  "signUp_fields_repeatPassword_placeholder": {
+    "message": "Repite contraseña"
+  },
+  "signUp_newHere": {
+    "message": "¿Eres nuevo?"
+  },
+  "signUp_register": {
+    "message": "Registro"
+  }
+}

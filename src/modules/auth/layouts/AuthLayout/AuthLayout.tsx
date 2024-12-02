@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import { AuthProvider } from "@/modules/auth/contexts";
 
-import { LanguageSelect } from "@/modules/i18n/components";
+// import { LanguageSelect } from "@/modules/i18n/components";
 
 export const AuthLayout = () => {
   return (
@@ -15,7 +15,7 @@ export const AuthLayout = () => {
       <div className="flex flex-col h-full">
         <AuthProvider>
           <div className="p-2 w-full flex justify-between items-center flex-0">
-            <LanguageSelect />
+            {/* <LanguageSelect /> */}
             <div className="flex flex-grow justify-end basis-0">
               <DarkThemeToggle className="w-8 h-8 p-[4px] flex justify-center items-center focus:ring-0 dark:focus:ring-0" />
             </div>

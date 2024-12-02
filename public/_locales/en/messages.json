@@ -1,0 +1,101 @@
+{
+  "auth_invalid_credential": {
+    "message": "Incorrect email or password"
+  },
+  "bookmarksBar_oldBookmarks": {
+    "message": "Old bookmarks"
+  },
+  "bookmarksBar_oldOtherBookmarks": {
+    "message": "Old other bookmarks"
+  },
+  "common_cancel": {
+    "message": "Cancel"
+  },
+  "home_bookmarksSynced": {
+    "message": "Bookmarks synced: $1"
+  },
+  "home_sync": {
+    "message": "Sync"
+  },
+  "home_syncInfoPopover": {
+    "message": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks."
+  },
+  "home_syncModal_message": {
+    "message": "This action will remove current bookmarks in bookmarks bar and substitute them with the synced bookmarks. Are you sure you want to continue?"
+  },
+  "home_syncModal_title": {
+    "message": "Sync bookmarks"
+  },
+  "home_title": {
+    "message": "👋 Hi $1"
+  },
+  "languages_en": {
+    "message": "English"
+  },
+  "languages_es": {
+    "message": "Spanish"
+  },
+  "login_fields_email_label": {
+    "message": "Email"
+  },
+  "login_fields_email_placeholder": {
+    "message": "example@mail.com"
+  },
+  "login_fields_password_label": {
+    "message": "Password"
+  },
+  "login_fields_password_placeholder": {
+    "message": "Password"
+  },
+  "login_signIn": {
+    "message": "Sign In"
+  },
+  "login_signUp": {
+    "message": "Sign up"
+  },
+  "settings_fields_languagesLabel": {
+    "message": "Language"
+  },
+  "settings_fields_root_helperText": {
+    "message": "Location where all synced bookmarks will be stored in the browser’s bookmarks bar."
+  },
+  "settings_fields_root_label": {
+    "message": "Root"
+  },
+  "settings_fields_root_placeholder": {
+    "message": "./SyncMarks"
+  },
+  "settings_title": {
+    "message": "Settings"
+  },
+  "signOut_buttonLabel": {
+    "message": "Sign out"
+  },
+  "signOut_modal_message": {
+    "message": "Are you sure you want to sign out?"
+  },
+  "signOut_modal_title": {
+    "message": "Sign out"
+  },
+  "signUp_alreadyHaveAccount": {
+    "message": "Already have an account?"
+  },
+  "signUp_createAccount": {
+    "message": "Create account"
+  },
+  "signUp_fields_repeatPassword_doesNotMatch": {
+    "message": "Passwords do not match"
+  },
+  "signUp_fields_repeatPassword_label": {
+    "message": "Repeat password"
+  },
+  "signUp_fields_repeatPassword_placeholder": {
+    "message": "Repeat password"
+  },
+  "signUp_newHere": {
+    "message": "New here?"
+  },
+  "signUp_register": {
+    "message": "Register"
+  }
+}

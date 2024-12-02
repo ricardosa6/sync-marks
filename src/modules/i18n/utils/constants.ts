@@ -1,6 +1,10 @@
-import i18next from "i18next";
-
 export const lngs = {
-  en: { name: i18next.t("languages.en"), nativeName: "English" },
-  es: { name: i18next.t("languages.es"), nativeName: "Español" },
+  en: {
+    name: chrome.i18n.getMessage("languages_en"),
+    nativeName: "English",
+  },
+  es: {
+    name: chrome.i18n.getMessage("languages_es"),
+    nativeName: "Español",
+  },
 };

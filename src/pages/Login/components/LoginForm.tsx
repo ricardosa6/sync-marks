@@ -1,5 +1,4 @@
 import { FormEvent, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Button } from "flowbite-react";
 import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +9,6 @@ import { IconMailFilled, IconPassword } from "@/modules/shared/icons";
 import { TextField } from "@/modules/shared/components";
 
 export const LoginForm = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
@@ -41,33 +39,37 @@ export const LoginForm = () => {
   return (
     <form className="flex max-w-md flex-col gap-4 w-full" onSubmit={signUp}>
       <TextField
-        label={t("login.fields.email.label")}
+        label={chrome.i18n.getMessage("login_fields_email_label")}
         color={Boolean(error) ? "failure" : undefined}
         disabled={loading}
         icon={() => (
           <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
         )}
         id="email"
-        placeholder={t("login.fields.email.placeholder")}
+        placeholder={chrome.i18n.getMessage("login_fields_email_placeholder")}
         required
         sizing="sm"
         type="email"
       />
       <TextField
-        label={t("login.fields.password.label")}
+        label={chrome.i18n.getMessage("login_fields_password_label")}
         color={Boolean(error) ? "failure" : undefined}
         disabled={loading}
         icon={() => (
           <IconPassword className="w-4 h-4 stroke-gray-600 dark:stroke-gray-400" />
         )}
         id="password"
-        placeholder={t("login.fields.password.placeholder")}
+        placeholder={chrome.i18n.getMessage(
+          "login_fields_password_placeholder"
+        )}
         required
         sizing="sm"
         type="password"
       />
       {error && (
-        <p className="text-red-500 text-sm font-medium">{t(`auth.${error}`)}</p>
+        <p className="text-red-500 text-sm font-medium">
+          {chrome.i18n.getMessage(`auth_${error}`)}
+        </p>
       )}
       <Button
         disabled={loading}
@@ -75,7 +77,7 @@ export const LoginForm = () => {
         gradientDuoTone="tealToLime"
         type="submit"
       >
-        {t("login.signIn")}
+        {chrome.i18n.getMessage("login_signIn")}
       </Button>
       {/* <Button
     disabled={loading}
