@@ -1,6 +1,9 @@
 import { FormEvent, useState } from "react";
 import { Button } from "flowbite-react";
-import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  AuthError,
+  signInWithEmailAndPassword,
+} from "firebase/auth/web-extension";
 import { useNavigate } from "react-router-dom";
 
 import { auth } from "@/lib/firebase";

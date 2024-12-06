@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import { Button } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthError } from "firebase/auth";
+import { AuthError } from "firebase/auth/web-extension";
 
 import {
   IconShieldCheck,
