@@ -1,5 +1,4 @@
 import { Button, Popover } from "flowbite-react";
-import { useTranslation } from "react-i18next";
 
 import { useAuthContext } from "@/modules/auth/contexts";
 
@@ -12,19 +11,22 @@ import { SyncButton } from "@/modules/bookmarks/components";
 export const Home = () => {
   const authContext = useAuthContext();
   const { count, loading: loadingBookmarks } = useBookmarksContext();
-  const { t } = useTranslation();
 
   return (
     <section className="flex justify-start items-center flex-col h-full flex-1 px-4 pt-1 pb-4 gap-4">
       <section>
         <h1 className="text-lg text-slate-900 dark:text-slate-300">
-          {t("home.title", { email: authContext?.currentUser?.email })}
+          {chrome.i18n.getMessage("home_title", [
+            authContext?.currentUser?.email || "",
+          ])}
         </h1>
         {loadingBookmarks ? (
           <Skeleton className="w-4 h-[8px] my-[5px]" />
         ) : (
           <p className="flex gap-1 items-center text-slate-900 dark:text-slate-300 text-opacity-70">
-            {t("home.bookmarksSynced", { count })}
+            {chrome.i18n.getMessage("home_bookmarksSynced", [
+              count.toString() || "",
+            ])}
           </p>
         )}
       </section>
@@ -36,7 +38,7 @@ export const Home = () => {
           content={
             <div className="w-64 text-sm text-gray-500 dark:text-gray-400">
               <div className="px-3 py-2">
-                <p>{t("home.syncInfoPopover")}</p>
+                <p>{chrome.i18n.getMessage("home_syncInfoPopover")}</p>
               </div>
             </div>
           }

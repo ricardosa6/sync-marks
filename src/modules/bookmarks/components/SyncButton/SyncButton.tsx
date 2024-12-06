@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button } from "flowbite-react";
-import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/modules/shared/components";
 import { IconCloud } from "@/modules/shared/icons";
@@ -8,8 +7,6 @@ import { IconCloud } from "@/modules/shared/icons";
 import { LOCK, SYNC_BOOKMARKS, UNLOCK } from "@/modules/shared/utils";
 
 export const SyncButton = () => {
-  const { t } = useTranslation();
-
   const [loading, setLoading] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
@@ -36,10 +33,10 @@ export const SyncButton = () => {
         size="xs"
       >
         <IconCloud className="mr-2 h-5 w-5" />
-        {t("home.sync")}
+        {chrome.i18n.getMessage("home_sync")}
       </Button>
       <Modal
-        body={t("home.syncModal.message")}
+        body={chrome.i18n.getMessage("home_syncModal_message")}
         open={openModal}
         primaryButton={
           <Button
@@ -50,11 +47,11 @@ export const SyncButton = () => {
             onClick={syncBookmarks}
           >
             <IconCloud className="h-4 w-4 mr-1" />
-            {t("home.sync")}
+            {chrome.i18n.getMessage("home_sync")}
           </Button>
         }
         setOpen={setOpenModal}
-        title={t("home.syncModal.title")}
+        title={chrome.i18n.getMessage("home_syncModal_title")}
       />
     </>
   );

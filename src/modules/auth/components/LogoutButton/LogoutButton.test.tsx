@@ -3,11 +3,11 @@ import { vi, describe, afterEach, beforeEach, it, Mock, expect } from "vitest";
 import { useAuthContext } from "@/modules/auth/contexts";
 import { LogoutButton } from "./LogoutButton";
 
-vi.mock("react-i18next", () => ({
-  useTranslation: () => ({
-    t: (key: string) => key,
-  }),
-}));
+vi.stubGlobal("chrome", {
+  i18n: {
+    getMessage: vi.fn((key: string) => key),
+  },
+});
 
 vi.mock("@/modules/auth/contexts", () => ({
   useAuthContext: vi.fn(),
@@ -28,21 +28,21 @@ describe("<LogoutButton />", () => {
 
   it("renders the logout button", () => {
     render(<LogoutButton />);
-    expect(screen.getByText("signOut.buttonLabel")).toBeInTheDocument();
+    expect(screen.getByText("signOut_buttonLabel")).toBeInTheDocument();
   });
 
   it("opens the modal on button click", () => {
     render(<LogoutButton />);
-    fireEvent.click(screen.getByText("signOut.buttonLabel"));
-    expect(screen.getByText("signOut.modal.title")).toBeInTheDocument();
-    expect(screen.getByText("signOut.modal.message")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("signOut_buttonLabel"));
+    expect(screen.getByText("signOut_modal_title")).toBeInTheDocument();
+    expect(screen.getByText("signOut_modal_message")).toBeInTheDocument();
   });
 
   it("calls logout and closes the modal on confirm", async () => {
     render(<LogoutButton />);
-    fireEvent.click(screen.getByText("signOut.buttonLabel"));
+    fireEvent.click(screen.getByText("signOut_buttonLabel"));
 
-    fireEvent.click(screen.getAllByText("signOut.buttonLabel")[1]);
+    fireEvent.click(screen.getAllByText("signOut_buttonLabel")[1]);
 
     expect(mockLogout).toHaveBeenCalled();
   });
@@ -50,10 +50,10 @@ describe("<LogoutButton />", () => {
   it("closes the modal on close button click", () => {
     render(<LogoutButton />);
 
-    fireEvent.click(screen.getByText("signOut.buttonLabel"));
+    fireEvent.click(screen.getByText("signOut_buttonLabel"));
 
-    fireEvent.click(screen.getByText("common.cancel"));
+    fireEvent.click(screen.getByText("common_cancel"));
 
-    expect(screen.queryByText("signOut.modal.title")).not.toBeInTheDocument();
+    expect(screen.queryByText("signOut_modal_title")).not.toBeInTheDocument();
   });
 });

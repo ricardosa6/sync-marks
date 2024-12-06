@@ -1,5 +1,4 @@
 import { Button, Modal as FlowbiteModal } from "flowbite-react";
-import { useTranslation } from "react-i18next";
 
 interface ModalProps {
   title?: string;
@@ -18,8 +17,6 @@ export const Modal = ({
   primaryButton,
   secondaryButton,
 }: ModalProps) => {
-  const { t } = useTranslation();
-
   return (
     <FlowbiteModal
       show={open}
@@ -43,7 +40,7 @@ export const Modal = ({
           secondaryButton
         ) : (
           <Button size="xs" color="gray" onClick={() => setOpen(false)}>
-            {t("common.cancel")}
+            {chrome.i18n.getMessage("common_cancel")}
           </Button>
         )}
       </FlowbiteModal.Footer>

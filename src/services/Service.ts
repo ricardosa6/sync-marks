@@ -1,4 +1,4 @@
-import { User as FirebaseUser } from "firebase/auth";
+import { User as FirebaseUser } from "firebase/auth/web-extension";
 
 import {
   clearBookmarks,

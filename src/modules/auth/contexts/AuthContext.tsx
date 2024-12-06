@@ -7,7 +7,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
-} from "firebase/auth";
+} from "firebase/auth/web-extension";
 
 import { doc, setDoc } from "firebase/firestore";
 

@@ -1,8 +1,7 @@
 import { FormEvent, useState } from "react";
 import { Button } from "flowbite-react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { AuthError } from "firebase/auth";
+import { AuthError } from "firebase/auth/web-extension";
 
 import {
   IconShieldCheck,
@@ -14,7 +13,6 @@ import { useAuthContext } from "@/modules/auth/contexts";
 import { TextField } from "@/modules/shared/components";
 
 export const Register = () => {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const authContext = useAuthContext();
 
@@ -62,27 +60,27 @@ export const Register = () => {
   return (
     <section className="flex justify-center items-center flex-col p-6">
       <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-300 mb-2">
-        {t("signUp.register")}
+        {chrome.i18n.getMessage("signUp_register")}
       </h1>
       <form
         className="flex max-w-md flex-col gap-4 w-full"
         onSubmit={handleSubmit}
       >
         <TextField
-          label={t("login.fields.email.label")}
+          label={chrome.i18n.getMessage("login_fields_email_label")}
           color={isError ? "failure" : undefined}
           disabled={loading}
           icon={() => (
             <IconMailFilled className="w-4 h-4 fill-gray-600 dark:fill-gray-400" />
           )}
           id="email"
-          placeholder={t("login.fields.email.placeholder")}
+          placeholder={chrome.i18n.getMessage("login_fields_email_placeholder")}
           required
           sizing="sm"
           type="email"
         />
         <TextField
-          label={t("login.fields.password.label")}
+          label={chrome.i18n.getMessage("login_fields_password_label")}
           color={passwordError ? "failure" : undefined}
           disabled={loading}
           icon={() => (
@@ -91,13 +89,15 @@ export const Register = () => {
             />
           )}
           id="password"
-          placeholder={t("login.fields.password.placeholder")}
+          placeholder={chrome.i18n.getMessage(
+            "login_fields_password_placeholder"
+          )}
           required
           sizing="sm"
           type="password"
         />
         <TextField
-          label={t("signUp.fields.repeatPassword.label")}
+          label={chrome.i18n.getMessage("signUp_fields_repeatPassword_label")}
           color={passwordError ? "failure" : undefined}
           disabled={loading}
           icon={() =>
@@ -108,14 +108,18 @@ export const Register = () => {
             )
           }
           id="repeatPassword"
-          placeholder={t("signUp.fields.repeatPassword.placeholder")}
+          placeholder={chrome.i18n.getMessage(
+            "signUp_fields_repeatPassword_placeholder"
+          )}
           required
           sizing="sm"
           type="password"
         />
         {!passwordMatch ? (
           <p className="text-red-500 text-sm font-medium">
-            {t("signUp.fields.repeatPassword.doesNotMatch")}
+            {chrome.i18n.getMessage(
+              "signUp_fields_repeatPassword_doesNotMatch"
+            )}
           </p>
         ) : null}
         <Button
@@ -124,7 +128,7 @@ export const Register = () => {
           gradientDuoTone="tealToLime"
           type="submit"
         >
-          {t("login.signUp")}
+          {chrome.i18n.getMessage("login_signUp")}
         </Button>
         {/* <Button
           disabled
@@ -149,12 +153,12 @@ export const Register = () => {
 
       <div className="mt-6">
         <p className="opacity-75 text-pretty text-slate-900 dark:text-slate-300">
-          {t("signUp.alreadyHaveAccount")}{" "}
+          {chrome.i18n.getMessage("signUp_alreadyHaveAccount")}{" "}
           <Link
             className="text-blue-600 dark:text-blue-400 hover:opacity-75 cursor-pointer"
             to="/auth/login"
           >
-            {t("login.signIn")}
+            {chrome.i18n.getMessage("login_signIn")}
           </Link>
         </p>
       </div>

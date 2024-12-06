@@ -1,7 +1,5 @@
 import { Label, Select } from "flowbite-react";
 
-import { useTranslation } from "react-i18next";
-
 import { lngs } from "@/modules/i18n/utils";
 
 interface LanguageSelectProps {
@@ -9,8 +7,6 @@ interface LanguageSelectProps {
 }
 
 export const LanguageSelect = ({ label }: LanguageSelectProps) => {
-  const { i18n } = useTranslation();
-
   const hasLabel = label !== undefined;
 
   return (
@@ -23,10 +19,10 @@ export const LanguageSelect = ({ label }: LanguageSelectProps) => {
       <Select
         id="languages"
         required
-        value={i18n.resolvedLanguage}
-        onChange={(event) => {
-          i18n.changeLanguage(event.target.value);
-        }}
+        // value={i18n.resolvedLanguage}
+        // onChange={(event) => {
+        //   i18n.changeLanguage(event.target.value);
+        // }}
         sizing="sm"
       >
         {Object.entries(lngs).map(([k, v]) => (
