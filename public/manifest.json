@@ -5,7 +5,7 @@
   "default_locale": "en",
   "permissions": ["bookmarks", "storage"],
   "content_security_policy": {
-    "extension_pages": "script-src 'self' https://apis.google.com https://www.gstatic.com https://www.googleapis.com https://securetoken.googleapis.com; object-src 'self';"
+    "extension_pages": "script-src 'self' https://firestore.googleapis.com https://www.googleapis.com https://securetoken.googleapis.com; object-src 'self';"
   },
   "action": {
     "default_popup": "index.html"
